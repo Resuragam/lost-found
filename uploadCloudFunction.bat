@@ -1,0 +1,1 @@
+"D:\WechatTool\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-1gltk5cq48294d1f --n quickstartFunctions --r --project "C:\Users\haoyuhhuang\Desktop\lost-found" --report_first --report
