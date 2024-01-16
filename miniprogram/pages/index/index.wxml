@@ -1,36 +1,55 @@
-<!--index.wxml-->
-<view class="container">
-
-  <view class="title">快速了解云开发</view>
-
-  <view class="top_tip">免鉴权接口调用 免部署后台 高并发</view>
-
-  <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
-    <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">
-      <view class="power_info_text">
-        <view class="power_info_text_title">
-          {{power.title}}
-          <view class="power_info_text_tag" wx:if="{{power.tag}}">{{power.tag}}</view>
+<!-- index.wxml -->
+<view>
+    <view class="search-module">
+        <van-search
+            class="search-filed"
+            value="{{ searchValue }}"
+            shape="round"
+            placeholder="请输入内容"
+        />
+        <view class="search-quick-entrance-cell">
+            <van-row gutter="16">
+                <van-col span="12">
+                    <van-cell
+                        title="寻物招领"
+                        label="寻找在校丢失物品"
+                    />
+                </van-col>
+                <van-col span="12">
+                    <van-cell
+                        title="失物招领"
+                        label="丢失物品寻找主人"
+                    />
+                </van-col>
+            </van-row>
         </view>
-        <view class="power_info_text_tip">{{power.tip}}</view>
-      </view>
-      <image wx:if="{{!power.showItem && power.item.length}}" class="power_info_more" src="../../images/arrow.svg"></image>
-      <image wx:if="{{power.showItem && power.item.length}}" class="power_info_less" src="../../images/arrow.svg"></image>
-      <image wx:if="{{!power.item.length}}" class="power_item_icon" src="../../images/arrow.svg"></image>
     </view>
-    <view wx:if="{{power.showItem}}">
-      <view wx:key="title" wx:for="{{power.item}}">
-        <view class="line"></view>
-        <view class="power_item" bindtap="jumpPage" data-page="{{item.page}}">
-          <view class="power_item_title">{{item.title}}</view>
-          <image class="power_item_icon" src="../../images/arrow.svg"></image>
+    <view>
+        <view>
+            <text>丢失范围</text>
+            <text>范围寻找</text>
         </view>
-      </view>
+        <view>
+            <van-tag
+                type="primary"
+                size="large"
+                >标签</van-tag
+            >
+            <van-tag type="success">标签</van-tag>
+            <van-tag type="danger">标签</van-tag>
+            <van-tag type="warning">标签</van-tag>
+        </view>
     </view>
-  </view>
-
-  <view class="environment" bindtap="onChangeShowEnvChoose">当前环境 {{ selectedEnv.alias }}</view>
-
-  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
-
+    <view class="article-container">
+        <view>
+            <text>寻物发现</text>
+            <text>查看全部</text>
+        </view>
+        <view class="lost-article-list">
+            <lost-article-card
+                wx:for="{{ [1, 2, 3, 4, 5] }}"
+                wx:key="index"
+            ></lost-article-card>
+        </view>
+    </view>
 </view>

@@ -1,0 +1,50 @@
+/* components/lostArticleCard/index.wxss */
+.lostArticleCard {
+  display: flex;
+  justify-content:flex-start;
+  background-color: #ffffff;
+  border: 1px solid #F1F1F1;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.lostArticleCard-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.lostArticleCard-desc-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lostArticleCard-desc-title {
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.lostArticleCard-desc-cell {
+  line-height: 12px;
+}
+
+.lostArticleCard-desc-tag {
+  font-size: 8px;
+  color: #4584FF;
+  margin-right: 8px;
+}
+
+.lostArticleCard-desc-time {
+  font-size: 8px;
+  color: #999999;
+}
+
+.van-tag {
+  font-size: 10px;
+}
