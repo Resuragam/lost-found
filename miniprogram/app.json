@@ -4,7 +4,9 @@
         "pages/index/index",
         "pages/my/myPage/index",
         "pages/my/school/index",
-        "pages/my/info/index"
+        "pages/my/info/index",
+        "pages/my/foundRecord/index",
+        "pages/my/lostRecord/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -14,16 +16,16 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-      "list": [
-        {
-          "pagePath": "pages/index/index",
-          "text": "首页"
-        },
-        {
-          "pagePath": "pages/my/myPage/index",
-          "text": "我的"
-        }
-      ]
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/my/myPage/index",
+                "text": "我的"
+            }
+        ]
     },
     "sitemapLocation": "sitemap.json",
     "lazyCodeLoading": "requiredComponents"

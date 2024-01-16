@@ -14,12 +14,14 @@
                 <van-cell
                     title="寻物需求记录"
                     label="24"
+                    bind:tap="toFoundRecord"
                 />
             </van-col>
             <van-col span="12">
                 <van-cell
                     title="失物招领记录"
                     label="12"
+                    bind:tap="toLostRecord"
                 />
             </van-col>
         </van-row>
@@ -36,6 +38,7 @@
                 title="个人资料"
                 icon="records-o"
                 is-link
+                bind:tap="toInfo"
             >
             </van-cell>
             <van-cell
