@@ -1,2 +1,20 @@
 <!--pages/my/foundRecord/index.wxml-->
-<text>pages/my/foundRecord/index.wxml</text>
+<view
+    class="foundRecord-conatiner"
+    wx:for="{{ [1, 2, 3] }}"
+    wx:key="index"
+>
+    <van-icon
+        name="guide-o"
+        color="#999999"
+    />
+    <text class="record-time-text">09-27</text>
+    <view class="lost-article-list">
+        <lost-article-card
+            wx:for="{{ [1, 2, 3] }}"
+            wx:key="index"
+        >
+        </lost-article-card>
+    </view>
+    <van-divider />
+</view>

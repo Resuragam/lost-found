@@ -1,3 +1,8 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "van-icon": "@vant/weapp/icon/index", 
+
+        "lost-article-card": "../../../components/lostArticleCard/index"
+    },
+    "navigationBarTitleText": "寻物需求记录"
 }

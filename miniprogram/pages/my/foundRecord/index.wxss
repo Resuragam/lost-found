@@ -1,1 +1,8 @@
 /* pages/my/foundRecord/index.wxss */
+.foundRecord-conatiner {
+  padding: 8px;
+}
+.record-time-text {
+  font-size: 12px;
+  color: #999999;
+}
