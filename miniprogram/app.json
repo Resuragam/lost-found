@@ -13,6 +13,18 @@
         "navigationBarTitleText": "云开发 QuickStart",
         "navigationBarTextStyle": "black"
     },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/my/myPage/index",
+          "text": "我的"
+        }
+      ]
+    },
     "sitemapLocation": "sitemap.json",
     "lazyCodeLoading": "requiredComponents"
 }
