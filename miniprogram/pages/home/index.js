@@ -1,4 +1,4 @@
-// pages/deployService/index.js
+// pages/home/index.js
 Page({
 
     /**
