@@ -32,6 +32,7 @@
                 title="学校绑定"
                 icon="hotel-o"
                 is-link
+                bind:tap="toBindSchool"
             >
             </van-cell>
             <van-cell

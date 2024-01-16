@@ -14,5 +14,10 @@ Page({
       wx.navigateTo({
         url: '/pages/my/lostRecord/index',
       })
+    },
+    toBindSchool() {
+      wx.navigateTo({
+        url: '/pages/my/bindSchool/index',
+      })
     }
 })

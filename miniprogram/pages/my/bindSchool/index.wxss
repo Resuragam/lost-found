@@ -1,0 +1,5 @@
+/* pages/my/bindSchool/index.wxss */
+.bindForm-conatiner {
+  padding: 8px;
+  border-radius: 16px;
+}
