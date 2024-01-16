@@ -24,32 +24,81 @@
             </van-row>
         </view>
     </view>
-    <view>
-        <view>
-            <text>丢失范围</text>
-            <text>范围寻找</text>
+    <view class="lost-range-container">
+        <view class="lost-range-title">
+            <text class="lost-range-title-left">丢失范围</text>
+            <text class="lost-range-title-right">范围寻找</text>
         </view>
-        <view>
+        <view class="lost-range-tag-list">
             <van-tag
+                plain
                 type="primary"
                 size="large"
-                >标签</van-tag
             >
-            <van-tag type="success">标签</van-tag>
-            <van-tag type="danger">标签</van-tag>
-            <van-tag type="warning">标签</van-tag>
+                足球操场
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                足球操场
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                足球操场
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                足球操场
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                标签
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                足球操场
+            </van-tag>
+            <van-tag
+                plain
+                type="primary"
+                size="large"
+            >
+                足球操场
+            </van-tag>
         </view>
     </view>
     <view class="article-container">
-        <view>
-            <text>寻物发现</text>
-            <text>查看全部</text>
-        </view>
-        <view class="lost-article-list">
-            <lost-article-card
-                wx:for="{{ [1, 2, 3, 4, 5] }}"
-                wx:key="index"
-            ></lost-article-card>
-        </view>
+        <van-tabs sticky>
+            <van-tab title="寻物发现">
+                <view class="lost-article-list">
+                    <lost-article-card
+                        wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
+                        wx:key="index"
+                    ></lost-article-card>
+                </view>
+            </van-tab>
+            <van-tab title="失物招领">
+                <view class="lost-article-list">
+                    <lost-article-card
+                        wx:for="{{ [1, 2, 3, 4, 5] }}"
+                        wx:key="index"
+                    ></lost-article-card>
+                </view>
+            </van-tab>
+        </van-tabs>
     </view>
 </view>
