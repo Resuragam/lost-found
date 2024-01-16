@@ -4,5 +4,6 @@
         "van-col": "@vant/weapp/col/index",
         "van-cell": "@vant/weapp/cell/index",
         "van-cell-group": "@vant/weapp/cell-group/index"
-    }
+    },
+    "navigationBarTitleText": ""
 }
