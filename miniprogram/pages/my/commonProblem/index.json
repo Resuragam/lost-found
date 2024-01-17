@@ -2,5 +2,6 @@
     "usingComponents": {
         "van-divider": "@vant/weapp/divider/index",
         "van-button": "@vant/weapp/button/index"
-      }      
+    },
+    "navigationBarTitleText": "常见问题"
 }
