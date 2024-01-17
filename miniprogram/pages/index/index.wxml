@@ -6,6 +6,7 @@
             value="{{ searchValue }}"
             shape="round"
             placeholder="请输入内容"
+            bind:tap="toSearchLost"
         />
         <view class="search-quick-entrance-cell">
             <van-row gutter="16">

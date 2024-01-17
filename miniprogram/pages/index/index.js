@@ -4,4 +4,9 @@ Page({
             url: '/pages/range/index',
         });
     },
+    toSearchLost() {
+      wx.navigateTo({
+        url: '/pages/searchLost/index',
+      })
+    }
 });
