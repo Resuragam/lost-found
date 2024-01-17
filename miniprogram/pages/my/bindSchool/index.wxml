@@ -23,8 +23,9 @@
             bind:change="onChange"
         />
     </van-cell-group>
+</view>
+<view class="bindForm-conatiner">
     <van-button
-        style="margin-top: 16px"
         type="info"
         block
     >
