@@ -19,5 +19,10 @@ Page({
       wx.navigateTo({
         url: '/pages/my/bindSchool/index',
       })
+    },
+    toCommonProblem() {
+      wx.navigateTo({
+        url: '/pages/my/commonProblem/index',
+      })
     }
 })

@@ -46,6 +46,7 @@
                 title="常见问题"
                 icon="search"
                 is-link
+                bind:tap="toCommonProblem"
             >
             </van-cell>
             <van-cell
