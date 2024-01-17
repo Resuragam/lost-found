@@ -1,0 +1,18 @@
+/* pages/range/index.wxss */
+.range-select-container {
+  padding: 12px;
+}
+
+.range-tag {
+  margin: 8px;
+}
+
+.range-title-container {
+    margin-bottom: 16px;
+}
+
+.range-title-text{
+    color: #222B4A;
+    font-size: 14px;
+}
+

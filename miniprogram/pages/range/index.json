@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+      "t-button": "tdesign-miniprogram/button/button",
+      "t-check-tag": "tdesign-miniprogram/check-tag/check-tag",
+      "t-col": "tdesign-miniprogram/col/col",
+      "t-row": "tdesign-miniprogram/row/row"
+    },
+    "navigationBarTitleText": "范围选择"
+}

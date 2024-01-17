@@ -27,7 +27,11 @@
     <view class="lost-range-container">
         <view class="lost-range-title">
             <text class="lost-range-title-left">丢失范围</text>
-            <text class="lost-range-title-right">范围寻找</text>
+            <text
+                class="lost-range-title-right"
+                bind:tap="toRangeSelect"
+                >范围寻找</text
+            >
         </view>
         <view class="lost-range-tag-list">
             <van-tag

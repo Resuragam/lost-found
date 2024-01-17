@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "pages/my/myPage/index",
+    "entryPagePath": "pages/range/index",
     "pages": [
         "pages/index/index",
         "pages/my/myPage/index",
@@ -9,7 +9,8 @@
         "pages/my/lostRecord/index",
         "pages/my/bindSchool/index",
         "pages/my/commonProblem/index",
-        "pages/issuance/publishFound/index"
+        "pages/issuance/publishFound/index",
+        "pages/range/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

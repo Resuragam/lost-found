@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Resuragam/lost-found#readme",
   "dependencies": {
-    "@vant/weapp": "^1.11.2"
+    "@vant/weapp": "^1.11.2",
+    "tdesign-miniprogram": "^1.2.6"
   }
 }
