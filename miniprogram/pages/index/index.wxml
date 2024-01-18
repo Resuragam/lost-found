@@ -14,12 +14,14 @@
                     <van-cell
                         title="寻物招领"
                         label="寻找在校丢失物品"
+                        bind:tap="toIssuancePublishFound"
                     />
                 </van-col>
                 <van-col span="12">
                     <van-cell
                         title="失物招领"
                         label="丢失物品寻找主人"
+                        bind:tap="toIssuancePublishLost"
                     />
                 </van-col>
             </van-row>

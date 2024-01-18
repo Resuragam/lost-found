@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "pages/range/index",
+    "entryPagePath": "pages/index/index",
     "pages": [
         "pages/index/index",
         "pages/my/myPage/index",
@@ -11,7 +11,8 @@
         "pages/my/commonProblem/index",
         "pages/issuance/publishFound/index",
         "pages/range/index",
-        "pages/searchLost/index"
+        "pages/searchLost/index",
+        "pages/issuance/publishLost/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -25,10 +26,6 @@
             {
                 "pagePath": "pages/index/index",
                 "text": "首页"
-            },
-            {
-                "pagePath": "pages/issuance/publishFound/index",
-                "text": "发布"
             },
             {
                 "pagePath": "pages/my/myPage/index",

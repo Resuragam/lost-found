@@ -1,7 +1,7 @@
 <!--pages/issuance/publishFound/index.wxml-->
 <view class="publish-container">
     <view class="input-container">
-        <view class="input-example__label"> 物品标题 </view>
+        <view class="input-example__label"> 寻物标题 </view>
         <t-input
             placeholder="例如：在某某地方捡到了某物品"
             borderless="{{ true }}"
@@ -9,7 +9,7 @@
         />
     </view>
     <view class="input-container">
-        <view class="input-example__label"> 拾取时间 </view>
+        <view class="input-example__label"> 丢失时间 </view>
         <t-input
             value="{{ datetime }}"
             placeholder="选择日期时间"
@@ -30,7 +30,7 @@
         />
     </view>
     <view class="input-container">
-        <view class="input-example__label"> 拾取位置 </view>
+        <view class="input-example__label"> 丢失位置 </view>
         <t-input
             placeholder="地图上选择坐标"
             borderless="{{ true }}"
