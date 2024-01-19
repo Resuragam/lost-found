@@ -18,5 +18,10 @@ Page({
       wx.navigateTo({
         url: '/pages/issuance/publishLost/index',
       })
+    },
+    toFoundSpace() {
+      wx.navigateTo({
+        url: '/pages/space/index',
+      })
     }
 });

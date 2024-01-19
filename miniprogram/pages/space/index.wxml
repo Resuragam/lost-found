@@ -1,0 +1,33 @@
+<!--pages/space/index.wxml-->
+<t-sticky>
+    <view>
+        <t-row>
+            <t-col
+                span="16"
+                t-class="dark"
+            >
+                <t-search
+                    value="{{ value }}"
+                    placeholder="搜索预设文案"
+                    action="{{ actionText }}"
+                    bind:blur="blurHandle"
+                    bind:focus="focusHandle"
+                    bind:action-click="actionHandle"
+                    bind:change="changeHandle"
+                />
+            </t-col>
+            <t-col
+                span="8"
+                t-class="light"
+            >
+                <t-tag
+                    class="margin-16"
+                    variant="outline"
+                    icon="discount"
+                >
+                    范围寻找
+                </t-tag>
+            </t-col>
+        </t-row>
+    </view>
+</t-sticky>

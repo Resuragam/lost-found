@@ -14,7 +14,7 @@
                     <van-cell
                         title="寻物招领"
                         label="寻找在校丢失物品"
-                        bind:tap="toIssuancePublishFound"
+                        bind:tap="toFoundSpace"
                     />
                 </van-col>
                 <van-col span="12">
