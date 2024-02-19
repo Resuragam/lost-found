@@ -7,4 +7,4 @@ Page({
   onChange1(e) {
     this.setData({ value1: e.detail.value });
   },
-})
+});

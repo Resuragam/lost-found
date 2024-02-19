@@ -1,9 +1,9 @@
 {
-    "usingComponents": {
-        "t-tag": "tdesign-miniprogram/tag/tag",
-        "t-sticky": "tdesign-miniprogram/sticky/sticky",
-        "t-row": "tdesign-miniprogram/row/row",
-        "t-col": "tdesign-miniprogram/col/col",
-        "t-search": "tdesign-miniprogram/search/search"
-    }
+  "usingComponents": {
+    "t-tag": "tdesign-miniprogram/tag/tag",
+    "t-sticky": "tdesign-miniprogram/sticky/sticky",
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-search": "tdesign-miniprogram/search/search"
+  }
 }

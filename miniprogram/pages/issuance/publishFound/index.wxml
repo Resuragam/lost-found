@@ -1,76 +1,63 @@
 <!--pages/issuance/publishFound/index.wxml-->
 <view class="publish-container">
-    <view class="input-container">
-        <view class="input-example__label"> 物品标题 </view>
-        <t-input
-            placeholder="例如：在某某地方捡到了某物品"
-            borderless="{{ true }}"
-            style="{{ style }}"
-        />
-    </view>
-    <view class="input-container">
-        <view class="input-example__label"> 拾取时间 </view>
-        <t-input
-            value="{{ datetime }}"
-            placeholder="选择日期时间"
-            borderless="{{ true }}"
-            style="{{ style }}"
-            data-mode="datetime"
-            bindtap="showPicker"
-        />
-        <t-date-time-picker
-            title="选择日期和时间"
-            visible="{{ datetimeVisible }}"
-            mode="second"
-            value="{{ datetime }}"
-            format="YYYY-MM-DD HH:mm:ss"
-            bindchange="onConfirm"
-            bindpick="onColumnChange"
-            bindcancel="hidePicker"
-        />
-    </view>
-    <view class="input-container">
-        <view class="input-example__label"> 拾取位置 </view>
-        <t-input
-            placeholder="地图上选择坐标"
-            borderless="{{ true }}"
-            style="{{ style }}"
-        />
-    </view>
-    <view class="input-container">
-        <view class="input-example__label"> 联系方式 </view>
-        <t-input
-            placeholder="请输入电话联系方式"
-            borderless="{{ true }}"
-            style="{{ style }}"
-        />
-    </view>
-    <view class="input-container">
-        <view class="input-example__label"> 物品描述 </view>
-        <t-textarea
-            t-class="external-class"
-            placeholder="请输入文字"
-            disableDefaultPadding="{{ true }}"
-            style="{{ style }}"
-        />
-    </view>
-    <view class="input-container">
-        <view class="input-example__label"> 物品图片 </view>
-        <t-upload
-            disabled
-            mediaType="{{ ['video', 'image'] }}"
-            max="{{ 1 }}"
-            files="{{ fileList }}"
-            bind:add="handleAdd"
-            bind:remove="handleRemove"
-        >
-        </t-upload>
-    </view>
-    <t-button
-        theme="primary"
-        size="large"
-        block
-    >
-        确定
-    </t-button>
+  <view class="input-container">
+    <view class="input-example__label"> 物品标题 </view>
+    <t-input
+      placeholder="例如：在某某地方捡到了某物品"
+      borderless="{{ true }}"
+      style="{{ style }}" />
+  </view>
+  <view class="input-container">
+    <view class="input-example__label"> 拾取时间 </view>
+    <t-input
+      value="{{ datetime }}"
+      placeholder="选择日期时间"
+      borderless="{{ true }}"
+      style="{{ style }}"
+      data-mode="datetime"
+      bindtap="showPicker" />
+    <t-date-time-picker
+      title="选择日期和时间"
+      visible="{{ datetimeVisible }}"
+      mode="second"
+      value="{{ datetime }}"
+      format="YYYY-MM-DD HH:mm:ss"
+      bindchange="onConfirm"
+      bindpick="onColumnChange"
+      bindcancel="hidePicker" />
+  </view>
+  <view class="input-container">
+    <view class="input-example__label"> 拾取位置 </view>
+    <t-input
+      placeholder="地图上选择坐标"
+      borderless="{{ true }}"
+      style="{{ style }}" />
+  </view>
+  <view class="input-container">
+    <view class="input-example__label"> 联系方式 </view>
+    <t-input
+      placeholder="请输入电话联系方式"
+      borderless="{{ true }}"
+      style="{{ style }}" />
+  </view>
+  <view class="input-container">
+    <view class="input-example__label"> 物品描述 </view>
+    <t-textarea
+      t-class="external-class"
+      placeholder="请输入文字"
+      disableDefaultPadding="{{ true }}"
+      style="{{ style }}" />
+  </view>
+  <view class="input-container">
+    <view class="input-example__label"> 物品图片 </view>
+    <t-upload
+      disabled
+      mediaType="{{ ['video', 'image'] }}"
+      max="{{ 1 }}"
+      files="{{ fileList }}"
+      bind:add="handleAdd"
+      bind:remove="handleRemove">
+    </t-upload>
+  </view>
+  <t-button theme="primary" size="large" block> 确定 </t-button>
 </view>

@@ -1,111 +1,62 @@
 <!-- index.wxml -->
 <view>
-    <view class="search-module">
-        <van-search
-            class="search-filed"
-            value="{{ searchValue }}"
-            shape="round"
-            placeholder="请输入内容"
-            bind:tap="toSearchLost"
-        />
-        <view class="search-quick-entrance-cell">
-            <van-row gutter="16">
-                <van-col span="12">
-                    <van-cell
-                        title="寻物招领"
-                        label="寻找在校丢失物品"
-                        bind:tap="toFoundSpace"
-                    />
-                </van-col>
-                <van-col span="12">
-                    <van-cell
-                        title="失物招领"
-                        label="丢失物品寻找主人"
-                        bind:tap="toIssuancePublishLost"
-                    />
-                </van-col>
-            </van-row>
-        </view>
+  <view class="search-module">
+    <van-search
+      class="search-filed"
+      value="{{ searchValue }}"
+      shape="round"
+      placeholder="请输入内容"
+      bind:tap="toSearchLost" />
+    <view class="search-quick-entrance-cell">
+      <van-row gutter="16">
+        <van-col span="12">
+          <van-cell
+            title="寻物招领"
+            label="寻找在校丢失物品"
+            bind:tap="toFoundSpace" />
+        </van-col>
+        <van-col span="12">
+          <van-cell
+            title="失物招领"
+            label="丢失物品寻找主人"
+            bind:tap="toIssuancePublishLost" />
+        </van-col>
+      </van-row>
     </view>
-    <view class="lost-range-container">
-        <view class="lost-range-title">
-            <text class="lost-range-title-left">丢失范围</text>
-            <text
-                class="lost-range-title-right"
-                bind:tap="toRangeSelect"
-                >范围寻找</text
-            >
-        </view>
-        <view class="lost-range-tag-list">
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                标签
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-            <van-tag
-                plain
-                type="primary"
-                size="large"
-            >
-                足球操场
-            </van-tag>
-        </view>
+  </view>
+  <view class="lost-range-container">
+    <view class="lost-range-title">
+      <text class="lost-range-title-left">丢失范围</text>
+      <text class="lost-range-title-right" bind:tap="toRangeSelect"
+        >范围寻找</text
+      >
     </view>
-    <view class="article-container">
-        <van-tabs sticky>
-            <van-tab title="寻物发现">
-                <view class="lost-article-list">
-                    <lost-article-card
-                        wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
-                        wx:key="index"
-                    ></lost-article-card>
-                </view>
-            </van-tab>
-            <van-tab title="失物招领">
-                <view class="lost-article-list">
-                    <lost-article-card
-                        wx:for="{{ [1, 2, 3, 4, 5] }}"
-                        wx:key="index"
-                    ></lost-article-card>
-                </view>
-            </van-tab>
-        </van-tabs>
+    <view class="lost-range-tag-list">
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
+      <van-tag plain type="primary" size="large"> 标签 </van-tag>
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
+      <van-tag plain type="primary" size="large"> 足球操场 </van-tag>
     </view>
+  </view>
+  <view class="article-container">
+    <van-tabs sticky>
+      <van-tab title="寻物发现">
+        <view class="lost-article-list">
+          <lost-article-card
+            wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
+            wx:key="index"></lost-article-card>
+        </view>
+      </van-tab>
+      <van-tab title="失物招领">
+        <view class="lost-article-list">
+          <lost-article-card
+            wx:for="{{ [1, 2, 3, 4, 5] }}"
+            wx:key="index"></lost-article-card>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
 </view>

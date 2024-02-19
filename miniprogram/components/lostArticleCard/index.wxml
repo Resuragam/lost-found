@@ -1,22 +1,21 @@
 <!--components/lostArticleCard/index.wxml-->
 <view class="lostArticleCard">
-    <view class="lostArticleCard-image-container">
-        <image
-            class="lostArticleCard-image"
-            src="https://img01.yzcdn.cn/vant/ipad.jpeg"
-        >
-        </image>
+  <view class="lostArticleCard-image-container">
+    <image
+      class="lostArticleCard-image"
+      src="https://img01.yzcdn.cn/vant/ipad.jpeg">
+    </image>
+  </view>
+  <view class="lostArticleCard-desc-container">
+    <view class="lostArticleCard-desc-title-container">
+      <text class="lostArticleCard-desc-title"> 在食堂讲到一个手机 </text>
     </view>
-    <view class="lostArticleCard-desc-container">
-        <view class="lostArticleCard-desc-title-container">
-            <text class="lostArticleCard-desc-title"> 在食堂讲到一个手机 </text>
-        </view>
-        <view class="lostArticleCard-desc-cell">
-            <text class="lostArticleCard-desc-tag">#一区食堂</text>
-            <text class="lostArticleCard-desc-tag">#电子产品</text>
-        </view>
-        <view class="lostArticleCard-desc-cell">
-            <text class="lostArticleCard-desc-time"> 丢失时间: 09-30 </text>
-        </view>
+    <view class="lostArticleCard-desc-cell">
+      <text class="lostArticleCard-desc-tag">#一区食堂</text>
+      <text class="lostArticleCard-desc-tag">#电子产品</text>
     </view>
+    <view class="lostArticleCard-desc-cell">
+      <text class="lostArticleCard-desc-time"> 丢失时间: 09-30 </text>
+    </view>
+  </view>
 </view>

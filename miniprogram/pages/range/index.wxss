@@ -8,11 +8,10 @@
 }
 
 .range-title-container {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
-.range-title-text{
-    color: #222B4A;
-    font-size: 14px;
+.range-title-text {
+  color: #222b4a;
+  font-size: 14px;
 }
-
