@@ -1,8 +1,8 @@
 <!-- index.wxml -->
 <view>
   <view class="search-module">
-    <van-search
-      class="search-filed"
+    <t-search
+      t-class-input-container="white-search-input"
       value="{{ searchValue }}"
       shape="round"
       placeholder="请输入内容"
