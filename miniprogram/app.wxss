@@ -19,7 +19,7 @@ button::after {
 }
 
 page {
-  background: #F7F8FA;
+  background: #f7f8fa;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

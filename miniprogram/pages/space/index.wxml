@@ -1,5 +1,5 @@
 <!--pages/space/index.wxml-->
-<t-sticky>
+<navigation-bar title="范围查找"></navigation-bar>
   <view>
     <t-row>
       <t-col span="16" t-class="dark">
@@ -19,4 +19,3 @@
       </t-col>
     </t-row>
   </view>
-</t-sticky>

@@ -1,10 +1,10 @@
 /**index.wxss**/
 .search-module {
-  background-image: linear-gradient(to left, #B4CAE8, #92A6F1, #B4CAE8);
+  background-image: linear-gradient(to left, #b4cae8, #92a6f1, #b4cae8);
   padding: 8rpx;
 }
 .white-search-input {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 .article-container {
   padding: 8px;

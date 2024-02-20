@@ -16,11 +16,7 @@
     "pages/space/index"
   ],
   "window": {
-    "backgroundColor": "#F7F8FA",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F7F8FA",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "list": [
