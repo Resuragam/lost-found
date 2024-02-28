@@ -1,5 +1,5 @@
 <!--pages/space/index.wxml-->
-<navigation-bar title="范围查找"></navigation-bar>
+<navigation-bar title="范围查找" leftArrow="{{true}}"></navigation-bar>
 <view>
   <t-row>
     <t-col

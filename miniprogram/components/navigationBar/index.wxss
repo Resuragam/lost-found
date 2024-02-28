@@ -16,3 +16,13 @@
   background: #ddd;
   padding-left: 14px;
 }
+.custom-title {
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.custom-navbar {
+  --td-navbar-color: #fff;
+  --td-navbar-bg-color: #5790ff;
+}
