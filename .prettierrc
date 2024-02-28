@@ -1,17 +1,22 @@
 {
   "tabWidth": 2,
-  "formatOnSave": true,
   "bracketSameLine": true,
   "useTabs": false,
   "semi": true,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
   "jsxSingleQuote": false,
+  "jsxBracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "lf",
+  "singleAttributePerLine": true,
   "overrides": [
     {
       "files": "*.wxml",
       "options": { "parser": "html" }
     },
     {
-      "files": "*.wxss",
+      "files": "*.scss",
       "options": { "parser": "css" }
     },
     {
