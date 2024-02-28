@@ -3,33 +3,46 @@
   <view class="avatar-container">
     <image
       class="avatar-image"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg">
-    </image>
-    <text class="nickname-text"> 黄花鱼 </text>
+      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+    <text class="nickname-text">黄花鱼</text>
   </view>
   <view class="record-container">
     <van-row gutter="16">
       <van-col span="12">
-        <van-cell title="寻物需求记录" label="24" bind:tap="toFoundRecord" />
+        <van-cell
+          title="寻物需求记录"
+          label="24"
+          bind:tap="toFoundRecord" />
       </van-col>
       <van-col span="12">
-        <van-cell title="失物招领记录" label="12" bind:tap="toLostRecord" />
+        <van-cell
+          title="失物招领记录"
+          label="12"
+          bind:tap="toLostRecord" />
       </van-col>
     </van-row>
   </view>
   <view class="operate-container">
     <van-cell-group>
-      <van-cell title="学校绑定" icon="hotel-o" is-link bind:tap="toBindSchool">
-      </van-cell>
-      <van-cell title="个人资料" icon="records-o" is-link bind:tap="toInfo">
-      </van-cell>
+      <van-cell
+        title="学校绑定"
+        icon="hotel-o"
+        is-link
+        bind:tap="toBindSchool"></van-cell>
+      <van-cell
+        title="个人资料"
+        icon="records-o"
+        is-link
+        bind:tap="toInfo"></van-cell>
       <van-cell
         title="常见问题"
         icon="search"
         is-link
-        bind:tap="toCommonProblem">
-      </van-cell>
-      <van-cell title="意见反馈" icon="chat-o" is-link> </van-cell>
+        bind:tap="toCommonProblem"></van-cell>
+      <van-cell
+        title="意见反馈"
+        icon="chat-o"
+        is-link></van-cell>
     </van-cell-group>
   </view>
 </view>

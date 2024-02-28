@@ -1,7 +1,7 @@
 const cloud = require("wx-server-sdk");
 
 cloud.init({
-  env: cloud.DYNAMIC_CURRENT_ENV,
+  env: cloud.DYNAMIC_CURRENT_ENV
 });
 const db = cloud.database();
 
@@ -13,22 +13,22 @@ exports.main = async (event, context) => {
       await db
         .collection("sales")
         .where({
-          _id: event.data[i]._id,
+          _id: event.data[i]._id
         })
         .update({
           data: {
-            sales: event.data[i].sales,
-          },
+            sales: event.data[i].sales
+          }
         });
     }
     return {
       success: true,
-      data: event.data,
+      data: event.data
     };
   } catch (e) {
     return {
       success: false,
-      errMsg: e,
+      errMsg: e
     };
   }
 };

@@ -22,5 +22,9 @@
   </van-cell-group>
 </view>
 <view class="bindForm-conatiner">
-  <van-button type="info" block> 绑定 </van-button>
+  <van-button
+    type="info"
+    block>
+    绑定
+  </van-button>
 </view>

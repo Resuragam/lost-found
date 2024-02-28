@@ -1,7 +1,7 @@
 const cloud = require("wx-server-sdk");
 
 cloud.init({
-  env: cloud.DYNAMIC_CURRENT_ENV,
+  env: cloud.DYNAMIC_CURRENT_ENV
 });
 const db = cloud.database();
 const $ = db.command.aggregate;
@@ -14,7 +14,7 @@ exports.main = async (event, context) => {
     .aggregate()
     .group({
       _id: "$region",
-      sum: $.sum("$sales"),
+      sum: $.sum("$sales")
     })
     .end();
 };

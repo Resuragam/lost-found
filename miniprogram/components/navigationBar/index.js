@@ -7,8 +7,8 @@ Component({
   properties: {
     title: {
       type: String,
-      value: "失物招领",
-    },
+      value: "失物招领"
+    }
   },
 
   /**
@@ -18,7 +18,7 @@ Component({
     navBarHeight: app.globalData.navBarHeight,
     menuRight: app.globalData.menuRight,
     menuTop: app.globalData.menuTop,
-    menuHeight: app.globalData.menuHeight,
+    menuHeight: app.globalData.menuHeight
   },
 
   /**
@@ -28,8 +28,8 @@ Component({
 
   lifetimes: {
     attached: function () {
-      console.log(this.data)
-      console.log('app', app, app.globalData)
-    },
-  },
+      console.log(this.data);
+      console.log("app", app, app.globalData);
+    }
+  }
 });

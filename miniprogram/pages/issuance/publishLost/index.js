@@ -8,20 +8,20 @@ Page({
     mode: "",
     datetimeVisible: false,
     datetime: new Date().getTime(),
-    datetimeText: "",
+    datetimeText: ""
   },
 
   showPicker(e) {
     const { mode } = e?.currentTarget?.dataset;
     this.setData({
       mode,
-      [`${mode}Visible`]: true,
+      [`${mode}Visible`]: true
     });
   },
   hidePicker() {
     const { mode } = this.data;
     this.setData({
-      [`${mode}Visible`]: false,
+      [`${mode}Visible`]: false
     });
   },
   onConfirm(e) {
@@ -32,7 +32,7 @@ Page({
 
     this.setData({
       [mode]: value,
-      [`${mode}Text`]: value,
+      [`${mode}Text`]: value
     });
 
     this.hidePicker();
@@ -80,5 +80,5 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {},
+  onShareAppMessage() {}
 });

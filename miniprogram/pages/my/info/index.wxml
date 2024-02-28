@@ -3,14 +3,20 @@
   <view class="avatar-container">
     <image
       class="avatar-image"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg">
-    </image>
+      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
   </view>
   <view class="info-container">
     <van-cell-group inset>
-      <van-cell title="昵称" value="黄花鱼" icon="user-o" is-link> </van-cell>
-      <van-cell title="手机号" value="16171114431" icon="phone-o" is-link>
-      </van-cell>
+      <van-cell
+        title="昵称"
+        value="黄花鱼"
+        icon="user-o"
+        is-link></van-cell>
+      <van-cell
+        title="手机号"
+        value="16171114431"
+        icon="phone-o"
+        is-link></van-cell>
     </van-cell-group>
   </view>
 </view>

@@ -4,7 +4,10 @@
     <text class="range-title-text">位置选择（已经选中两个）</text>
   </view>
   <t-row gutter="16">
-    <t-col wx:for="{{ 10 }}" wx:key="index" span="8">
+    <t-col
+      wx:for="{{ 10 }}"
+      wx:key="index"
+      span="8">
       <t-check-tag
         class="range-tag"
         size="large"
@@ -12,5 +15,10 @@
         content="{{ ['已选中态', '未选中态'] }}" />
     </t-col>
   </t-row>
-  <t-button theme="primary" size="large" block> 确定 </t-button>
+  <t-button
+    theme="primary"
+    size="large"
+    block>
+    确定
+  </t-button>
 </view>

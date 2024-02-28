@@ -2,27 +2,27 @@
 Page({
   toInfo() {
     wx.navigateTo({
-      url: "/pages/my/info/index",
+      url: "/pages/my/info/index"
     });
   },
   toFoundRecord() {
     wx.navigateTo({
-      url: "/pages/my/foundRecord/index",
+      url: "/pages/my/foundRecord/index"
     });
   },
   toLostRecord() {
     wx.navigateTo({
-      url: "/pages/my/lostRecord/index",
+      url: "/pages/my/lostRecord/index"
     });
   },
   toBindSchool() {
     wx.navigateTo({
-      url: "/pages/my/bindSchool/index",
+      url: "/pages/my/bindSchool/index"
     });
   },
   toCommonProblem() {
     wx.navigateTo({
-      url: "/pages/my/commonProblem/index",
+      url: "/pages/my/commonProblem/index"
     });
-  },
+  }
 });
