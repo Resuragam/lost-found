@@ -1,23 +1,16 @@
 <!--pages/searchLost/index.wxml-->
-<view>
+<navigation-bar
+  leftArrow="{{true}}"
+  title="失物招领"></navigation-bar>
+<view class="search-container">
   <t-search
     placeholder="请输入失物"
     shape="round" />
-  <t-cell-group theme="card">
-    <t-cell
-      title="单行标题"
-      leftIcon="service"
-      hover
-      arrow />
-    <t-cell
-      title="单行标题"
-      leftIcon="internet"
-      hover
-      arrow />
-    <t-cell
-      title="单行标题"
-      leftIcon="lock-on"
-      hover
-      arrow />
-  </t-cell-group>
+</view>
+<view>
+  <t-cell
+    wx:for="{{20}}"
+    wx:key="index"
+    title="单行标题"
+    leftIcon="search" />
 </view>

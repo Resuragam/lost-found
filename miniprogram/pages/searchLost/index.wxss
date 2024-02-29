@@ -1,1 +1,5 @@
 /* pages/searchLost/index.wxss */
+.search-container {
+  padding: 16rpx 32rpx;
+  background-color: #5790ff;
+}

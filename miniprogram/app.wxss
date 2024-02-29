@@ -1,7 +1,9 @@
 /**app.wxss**/
 .tabbar-page-container {
   padding: 0 32rpx calc(112rpx + env(safe-area-inset-bottom)) 32rpx;
+  background-color: #f2f2f2;
 }
 .page-container {
   padding: 0 32rpx;
+  background-color: #f2f2f2;
 }
