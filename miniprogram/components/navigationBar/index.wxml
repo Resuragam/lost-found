@@ -2,6 +2,6 @@
 <!-- 自定义顶部栏 -->
 <t-navbar
   title="{{title}}"
-  class="custom-navbar" 
+  class="custom-navbar"
   t-class-title="custom-title"
   left-arrow="{{leftArrow}}"></t-navbar>

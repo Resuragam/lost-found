@@ -1,17 +1,32 @@
 /* pages/range/index.wxss */
 .range-select-container {
-  padding: 12px;
+  padding: 32rpx;
 }
 
 .range-tag {
-  margin: 8px;
+  margin: 16rpx;
 }
 
 .range-title-container {
-  margin-bottom: 16px;
+  margin-bottom: 32rpx;
+  color: #222b4a;
+}
+
+.t-col {
+  text-align: center !important;
 }
 
 .range-title-text {
-  color: #222b4a;
-  font-size: 14px;
+  font-size: 32rpx;
+}
+
+.range-detail-text {
+  font-size: 28rpx;
+}
+
+.button-container {
+  position: sticky !important;
+  bottom: 0;
+  padding: 16rpx 32rpx calc(32rpx + env(safe-area-inset-bottom));
+  background-color: #fff;
 }

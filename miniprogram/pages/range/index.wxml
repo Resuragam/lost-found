@@ -1,11 +1,15 @@
 <!--pages/range/index.wxml-->
+<navigation-bar
+  title="范围查找"
+  leftArrow="{{true}}"></navigation-bar>
 <view class="range-select-container">
   <view class="range-title-container">
-    <text class="range-title-text">位置选择（已经选中两个）</text>
+    <text class="range-title-text">位置选择</text>
+    <text class="range-detail-text">（已选中{{checkedNum}}个）</text>
   </view>
   <t-row gutter="16">
     <t-col
-      wx:for="{{ 10 }}"
+      wx:for="{{ 99 }}"
       wx:key="index"
       span="8">
       <t-check-tag
@@ -15,7 +19,10 @@
         content="{{ ['已选中态', '未选中态'] }}" />
     </t-col>
   </t-row>
+</view>
+<view class="button-container">
   <t-button
+    class="custom-button"
     theme="primary"
     size="large"
     block>

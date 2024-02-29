@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "navigation-bar": "/components/navigationBar/index",
     "t-button": "tdesign-miniprogram/button/button",
     "t-check-tag": "tdesign-miniprogram/check-tag/check-tag",
     "t-col": "tdesign-miniprogram/col/col",
