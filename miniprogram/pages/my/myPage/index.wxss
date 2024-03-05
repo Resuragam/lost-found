@@ -1,29 +1,78 @@
-/* pages/my/myPage/index.wxss */
-.my-container {
-  padding: 8px;
-}
-.avatar-container {
+.myPage-container {
+  height: 500rpx;
   display: flex;
+  z-index: 10;
   justify-content: center;
+  padding-top: 40rpx;
+  position: relative;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  animation: updown 6s infinite alternate;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+@keyframes updown {
+  0% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 50% 60%;
+  }
 }
 
-.avatar-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
-  margin-bottom: 16px;
+.nickName-container {
+  margin-top: 32rpx;
+  font-size: 32rpx;
+  color: #222b4a;
 }
 
-.nickname-text {
-  font-size: 16px;
+.girfather {
+  position: absolute;
+  bottom: -100rpx;
+  width: 150vw;
+  height: 200rpx;
+}
+.myPage-container .gif-wave {
+  position: absolute;
+  width: 150vw;
+  bottom: 100rpx;
+  left: 0;
+  mix-blend-mode: screen;
+  height: 100rpx;
+  transform-origin: center bottom;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .record-container {
-  margin-bottom: 16px;
+  margin-bottom: 32rpx;
 }
 
-.operate-container {
+.record-card-container {
+  padding: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24rpx;
+  background-color: #fcfcfc;
+}
+
+.record-title-text {
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.record-num-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #323232;
+}
+
+.t-cell {
+  background-color: #fcfcfc !important;
 }

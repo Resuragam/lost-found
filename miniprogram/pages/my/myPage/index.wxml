@@ -1,48 +1,77 @@
 <!--pages/my/myPage/index.wxml-->
-<view class="my-container">
-  <view class="avatar-container">
+<view
+  class="myPage-container"
+  style="{{bgColor}}">
+  <t-avatar
+    image="{{avatarUrl}}"
+    size="large" />
+  <view class="nickName-container">
+    <text>{{nickName}}</text>
+  </view>
+  <view class="girfather">
     <image
-      class="avatar-image"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
-    <text class="nickname-text">黄花鱼</text>
+      class="gifImg gif-wave"
+      mode="aspectFill"
+      src="https://hnust-ticknet-swzl.oss-cn-hangzhou.aliyuncs.com/secondClass/2021/08/30/88fa6475-d5eb-4178-bbf9-0bf656762779.gif"
+      mode="scaleToFill"></image>
   </view>
-  <view class="record-container">
-    <van-row gutter="16">
-      <van-col span="12">
-        <van-cell
-          title="寻物需求记录"
-          label="24"
-          bind:tap="toFoundRecord" />
-      </van-col>
-      <van-col span="12">
-        <van-cell
-          title="失物招领记录"
-          label="12"
-          bind:tap="toLostRecord" />
-      </van-col>
-    </van-row>
-  </view>
-  <view class="operate-container">
-    <van-cell-group>
-      <van-cell
-        title="学校绑定"
-        icon="hotel-o"
-        is-link
-        bind:tap="toBindSchool"></van-cell>
-      <van-cell
-        title="个人资料"
-        icon="records-o"
-        is-link
-        bind:tap="toInfo"></van-cell>
-      <van-cell
-        title="常见问题"
-        icon="search"
-        is-link
-        bind:tap="toCommonProblem"></van-cell>
-      <van-cell
-        title="意见反馈"
-        icon="chat-o"
-        is-link></van-cell>
-    </van-cell-group>
-  </view>
+</view>
+
+<view class="tabbar-page-container">
+  <t-row class="record-container">
+    <t-col span="12">
+      <view
+        class="record-card-container"
+        style="margin-right: 16rpx">
+        <view>
+          <view class="record-title-text">失物需求记录</view>
+          <view class="record-num-text">24</view>
+        </view>
+        <view>
+          <t-image
+            src="/public/images/foundRecord.png"
+            mode="aspectFill"
+            width="60"
+            height="60" />
+        </view>
+      </view>
+    </t-col>
+    <t-col span="12">
+      <view
+        class="record-card-container"
+        style="margin-left: 16rpx">
+        <view>
+          <view class="record-title-text">寻物需求记录</view>
+          <view class="record-num-text">24</view>
+        </view>
+        <t-image
+          src="/public/images/lostRecord.png"
+          mode="aspectFill"
+          width="60"
+          height="60" />
+      </view>
+    </t-col>
+  </t-row>
+  <t-cell-group theme="default">
+    <t-cell
+      title="学校绑定"
+      leftIcon="city-14"
+      hover
+      arrow />
+    <t-cell
+      title="个人资料"
+      leftIcon="edit"
+      hover
+      arrow />
+    <t-cell
+      title="常见问题"
+      leftIcon="search"
+      hover
+      arrow />
+      <t-cell
+      title="意见反馈"
+      leftIcon="mail"
+      hover
+      arrow />
+  </t-cell-group>
 </view>

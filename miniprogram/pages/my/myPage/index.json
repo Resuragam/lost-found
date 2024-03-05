@@ -1,9 +1,13 @@
 {
   "usingComponents": {
-    "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "navigation-bar": "/components/navigationBar/index",
+    "t-avatar": "tdesign-miniprogram/avatar/avatar",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-icon": "tdesign-miniprogram/icon/icon"
   },
   "navigationBarTitleText": ""
 }
