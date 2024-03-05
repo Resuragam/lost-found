@@ -57,12 +57,16 @@
       title="学校绑定"
       leftIcon="city-14"
       hover
-      arrow />
+      arrow
+      url="/pages/my/bindSchool/index"
+      />
     <t-cell
       title="个人资料"
       leftIcon="edit"
       hover
-      arrow />
+      arrow 
+      url="/pages/my/info/index"
+      />
     <t-cell
       title="常见问题"
       leftIcon="search"
