@@ -3,32 +3,21 @@
   title="学校绑定"
   leftArrow="{{true}}"
   custom-navbar="custom-navbar"></navigation-bar>
-<view class="bindForm-conatiner">
-  <van-cell-group>
-    <van-field
-      label="学校名称"
-      value="{{ value }}"
-      placeholder="请输入学校全名"
-      border="{{ false }}"
-      bind:change="onChange" />
-    <van-field
-      label="学院名称"
-      value="{{ value }}"
-      placeholder="请输入学院名称"
-      border="{{ false }}"
-      bind:change="onChange" />
-    <van-field
-      label="学号"
-      value="{{ value }}"
-      placeholder="请输入学号"
-      border="{{ false }}"
-      bind:change="onChange" />
-  </van-cell-group>
-</view>
-<view class="bindForm-conatiner">
-  <van-button
-    type="info"
+<view class="page-container">
+  <view class="form-container">
+    <view class="input-label">标签文字</view>
+    <t-input placeholder="请输入文字" />
+    <view class="input-label">标签文字</view>
+    <t-input placeholder="请输入文字" />
+    <view class="input-label">标签文字</view>
+    <t-input
+      placeholder="请输入文字"
+      style="margin-bottom: 0" />
+  </view>
+
+  <t-button
+    theme="primary"
     block>
     绑定
-  </van-button>
+  </t-button>
 </view>

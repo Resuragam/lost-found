@@ -58,21 +58,19 @@
       leftIcon="city-14"
       hover
       arrow
-      url="/pages/my/bindSchool/index"
-      />
+      url="/pages/my/bindSchool/index" />
     <t-cell
       title="个人资料"
       leftIcon="edit"
       hover
-      arrow 
-      url="/pages/my/info/index"
-      />
+      arrow
+      url="/pages/my/info/index" />
     <t-cell
       title="常见问题"
       leftIcon="search"
       hover
       arrow />
-      <t-cell
+    <t-cell
       title="意见反馈"
       leftIcon="mail"
       hover

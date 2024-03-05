@@ -1,10 +1,27 @@
 /* pages/my/bindSchool/index.wxss */
-.bindForm-conatiner {
-  padding: 8px;
-  border-radius: 16px;
+.input-label {
+  color: #222b4a;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin: 0 8rpx 16rpx;
 }
 
 .custom-navbar {
-  /* --td-navbar-color: #fff;
-  --td-navbar-bg-color: red; */
+  --td-navbar-color: #222b4a !important;
+  --td-navbar-bg-color: #fff !important;
+}
+
+.t-input {
+  margin-bottom: 36rpx;
+  --td-input-vertical-padding: 24rpx;
+  --td-input-bg-color: #f6f6f6;
+  --td-input-label-text-color: #ccc;
+  border-radius: 16rpx;
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 32rpx;
+  margin: 32rpx 0;
+  padding: 32rpx;
 }

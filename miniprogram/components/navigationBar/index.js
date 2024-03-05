@@ -10,5 +10,5 @@ Component({
       value: ""
     }
   },
-  externalClasses: ['custom-navbar']
+  externalClasses: ["custom-navbar"]
 });

@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 
-.custom-navbar {
+.default-navbar {
   --td-navbar-color: #fff;
   --td-navbar-bg-color: #5790ff;
 }

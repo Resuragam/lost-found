@@ -1,8 +1,7 @@
 {
   "usingComponents": {
     "navigation-bar": "/components/navigationBar/index",
-    "van-field": "@vant/weapp/field/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-button": "@vant/weapp/button/index"
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-button": "tdesign-miniprogram/button/button"
   }
 }
