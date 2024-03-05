@@ -1,4 +1,8 @@
 <!--pages/my/bindSchool/index.wxml-->
+<navigation-bar
+  title="学校绑定"
+  leftArrow="{{true}}"
+  custom-navbar="custom-navbar"></navigation-bar>
 <view class="bindForm-conatiner">
   <van-cell-group>
     <van-field

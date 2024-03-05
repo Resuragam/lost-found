@@ -9,5 +9,6 @@ Component({
       type: String,
       value: ""
     }
-  }
+  },
+  externalClasses: ['custom-navbar']
 });

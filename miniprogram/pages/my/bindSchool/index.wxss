@@ -3,3 +3,8 @@
   padding: 8px;
   border-radius: 16px;
 }
+
+.custom-navbar {
+  /* --td-navbar-color: #fff;
+  --td-navbar-bg-color: red; */
+}
