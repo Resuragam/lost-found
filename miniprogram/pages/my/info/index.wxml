@@ -5,22 +5,22 @@
   custom-navbar="custom-navbar"></navigation-bar>
 <view class="page-container">
   <view class="avatar-container">
-    <image
-      class="avatar-image"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+    <t-avatar
+      image="{{avatarUrl}}"
+      size="large" />
   </view>
-  <view class="info-container">
-    <van-cell-group inset>
-      <van-cell
-        title="昵称"
-        value="黄花鱼"
-        icon="user-o"
-        is-link></van-cell>
-      <van-cell
-        title="手机号"
-        value="16171114431"
-        icon="phone-o"
-        is-link></van-cell>
-    </van-cell-group>
-  </view>
+  <t-cell-group theme="card">
+    <t-cell
+      title="昵称"
+      leftIcon="personal-information"
+      note="测试昵称"
+      hover
+      arrow />
+    <t-cell
+      title="手机号"
+      leftIcon="mobile"
+      note="16670114430"
+      hover
+      arrow />
+  </t-cell-group>
 </view>

@@ -3,7 +3,9 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+  },
 
   /**
    * 生命周期函数--监听页面加载

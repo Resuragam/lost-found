@@ -7,11 +7,10 @@
 .avatar-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
+  margin: 48rpx 0;
 }
 
-.avatar-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+.t-cell-group--card {
+  margin: 0 !important;
+  border-radius: 24rpx !important;
 }
