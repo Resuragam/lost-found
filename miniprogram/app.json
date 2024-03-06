@@ -1,5 +1,5 @@
 {
-  "entryPagePath": "pages/index/index",
+  "entryPagePath": "pages/issuance/publishFound/index",
   "pages": [
     "pages/index/index",
     "pages/my/myPage/index",

@@ -4,7 +4,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    style: "border: 2rpx solid rgba(220,220,220,1);border-radius: 12rpx;",
     mode: "",
     datetimeVisible: false,
     datetime: new Date().getTime(),

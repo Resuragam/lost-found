@@ -37,18 +37,18 @@ Component({
     },
     toPublishLost() {
       wx.navigateTo({
-        url: "/pages/issuance/publishLost/index",
-      })
+        url: "/pages/issuance/publishLost/index"
+      });
     },
     toPublishFound() {
       wx.navigateTo({
-        url: "/pages/issuance/publishFound/index",
-      })
+        url: "/pages/issuance/publishFound/index"
+      });
     },
     closeOverload() {
       this.setData({
         visible: false
-      })
+      });
     }
   }
 });
