@@ -14,7 +14,7 @@ Component({
         url: "/pages/test/index"
       }
     ],
-    visible: false
+    visible: true
   },
   //  组件的方法列表
   methods: {
@@ -30,7 +30,7 @@ Component({
         value: this.data.list.findIndex(item => item.url === `/${page?.route}`)
       });
     },
-    handleClick() {
+    handleShowOverlay() {
       this.setData({
         visible: true
       });

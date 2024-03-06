@@ -12,7 +12,8 @@
   <t-button
     class="custom-button"
     icon="add"
-    shape="round"></t-button>
+    shape="round"
+    bind:tap="handleShowOverlay"></t-button>
   <t-tab-bar-item
     icon="user"
     value="{{1}}">
@@ -20,6 +21,46 @@
   </t-tab-bar-item>
 </t-tab-bar>
 <t-overlay
+  class="custom-overlay"
   visible="{{visible}}"
   duration="{{500}}"
-  bind:click="handleOverlayClick" />
+  bind:click="handleOverlayClick">
+  <view class="operate-container">
+    <view class="publish-container">
+      <view
+        class="operate-icon-box"
+        style="background-color: #ea8932">
+        <t-icon
+          name="system-search"
+          color="#fff"
+          size="48rpx" />
+      </view>
+      <view class="operate-text-box">
+        <view class="operate-text-title">发布寻物需求</view>
+        <view class="operate-text-tips">让大家帮忙找找</view>
+      </view>
+    </view>
+    <view class="publish-container">
+      <view
+        class="operate-icon-box"
+        style="background-color: #75a4ff">
+        <t-icon
+          color="#fff"
+          name="component-space"
+          size="48rpx" />
+      </view>
+      <view class="operate-text-box">
+        <view class="operate-text-title">发布物品招领</view>
+        <view class="operate-text-tips">丢失物品寻找主人</view>
+      </view>
+    </view>
+    <view
+      class="operate-icon-box"
+      style="background-color: #ffffff">
+      <t-icon
+        name="close"
+        size="48rpx"
+        color="#222B4A" />
+    </view>
+  </view>
+</t-overlay>

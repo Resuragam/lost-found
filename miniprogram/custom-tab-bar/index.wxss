@@ -10,3 +10,45 @@
   border: none !important;
   --td-button-default-color: #fff;
 }
+
+.operate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: calc(124rpx + env(safe-area-inset-bottom));
+  width: 100%;
+}
+
+.publish-container {
+  display: flex;
+  margin-bottom: 80rpx;
+}
+
+.operate-icon-box {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 56rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.operate-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.operate-text-title {
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+
+.operate-text-tips {
+  color: #000;
+  font-size: 24rpx;
+}
