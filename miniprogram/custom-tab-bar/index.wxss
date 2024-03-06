@@ -1,0 +1,12 @@
+/* custom-tab-bar/index.wxss */
+.custom-tab-bar {
+  --td-tab-bar-active-color: #7e97fa;
+  --td-tab-bar-color: #bbbabf;
+}
+
+.custom-button {
+  background-image: linear-gradient(to left, #6d9dff, #4785ff) !important;
+  --td-button-default-active-bg-color: #4785ff;
+  border: none !important;
+  --td-button-default-color: #fff;
+}

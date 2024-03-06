@@ -1,5 +1,5 @@
 {
-  "entryPagePath": "pages/my/myPage/index",
+  "entryPagePath": "pages/test/index",
   "pages": [
     "pages/index/index",
     "pages/my/myPage/index",
@@ -13,20 +13,23 @@
     "pages/range/index",
     "pages/searchLost/index",
     "pages/issuance/publishLost/index",
-    "pages/space/index"
+    "pages/space/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationStyle": "custom"
   },
   "tabBar": {
+    "custom": true,
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/my/myPage/index",
-        "text": "我的"
+        "pagePath": "pages/my/myPage/index"
+      },
+      {
+        "pagePath": "pages/test/index"
       }
     ]
   },

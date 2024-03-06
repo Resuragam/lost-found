@@ -1,0 +1,25 @@
+<!--custom-tab-bar/index.wxml-->
+<t-tab-bar
+  class="custom-tab-bar"
+  value="{{ value }}"
+  split="{{false}}"
+  bindchange="onChange">
+  <t-tab-bar-item
+    icon="home"
+    value="{{0}}">
+    首页
+  </t-tab-bar-item>
+  <t-button
+    class="custom-button"
+    icon="add"
+    shape="round"></t-button>
+  <t-tab-bar-item
+    icon="user"
+    value="{{1}}">
+    我的
+  </t-tab-bar-item>
+</t-tab-bar>
+<t-overlay
+  visible="{{visible}}"
+  duration="{{500}}"
+  bind:click="handleOverlayClick" />

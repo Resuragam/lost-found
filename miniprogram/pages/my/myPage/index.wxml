@@ -73,8 +73,8 @@
       title="常见问题"
       leftIcon="search"
       hover
-      arrow 
-      url="/pages/my/commonProblem/index"/>
+      arrow
+      url="/pages/my/commonProblem/index" />
     <t-cell
       title="意见反馈"
       leftIcon="mail"
