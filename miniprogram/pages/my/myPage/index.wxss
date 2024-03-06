@@ -45,6 +45,13 @@
   transform-origin: center bottom;
 }
 
+.default-container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .info-container {
   display: flex;
   justify-content: space-between;

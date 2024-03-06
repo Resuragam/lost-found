@@ -1,8 +1,7 @@
 {
   "usingComponents": {
+    "navigation-bar": "/components/navigationBar/index",
     "van-icon": "@vant/weapp/icon/index",
-
     "lost-article-card": "../../../components/lostArticleCard/index"
-  },
-  "navigationBarTitleText": "失物招领记录"
+  }
 }

@@ -3,17 +3,16 @@
   display: flex;
   justify-content: flex-start;
   background-color: #ffffff;
-  border: 1px solid #f1f1f1;
-  border-radius: 8px;
-  padding: 8px;
-  margin: 4px 0px;
+  border-radius: 16rpx;
+  padding: 16rpx;
+  margin: 8rpx 0px;
 }
 
 .lostArticleCard-image {
-  height: 50px;
-  width: 50px;
-  border-radius: 4px;
-  margin-right: 8px;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 8rpx;
+  margin-right: 16rpx;
 }
 
 .lostArticleCard-desc-title-container {
@@ -23,7 +22,7 @@
 }
 
 .lostArticleCard-desc-title {
-  font-size: 12px;
+  font-size: 24rpx;
   font-weight: bold;
   white-space: nowrap; /* 不换行 */
   overflow: hidden; /* 超出隐藏 */
@@ -31,20 +30,20 @@
 }
 
 .lostArticleCard-desc-cell {
-  line-height: 12px;
+  line-height: 24rpx;
 }
 
 .lostArticleCard-desc-tag {
-  font-size: 8px;
+  font-size: 16rpx;
   color: #4584ff;
-  margin-right: 8px;
+  margin-right: 16rpx;
 }
 
 .lostArticleCard-desc-time {
-  font-size: 8px;
+  font-size: 16rpx;
   color: #999999;
 }
 
 .van-tag {
-  font-size: 10px;
+  font-size: 20rpx;
 }

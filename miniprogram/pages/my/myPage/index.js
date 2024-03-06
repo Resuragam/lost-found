@@ -4,5 +4,10 @@ Page({
   data: {
     nickName: "测试名称",
     avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+  },
+  toLostRecord() {
+    wx.navigateTo({
+      url: "/pages/my/lostRecord/index"
+    });
   }
 });

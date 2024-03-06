@@ -17,9 +17,11 @@
   </view>
 </view>
 
-<view class="tabbar-page-container">
+<view class="tabbar-page-container default-container">
   <t-row class="record-container">
-    <t-col span="12">
+    <t-col
+      span="12"
+      bind:tap="toLostRecord">
       <view
         class="record-card-container"
         style="margin-right: 16rpx">
