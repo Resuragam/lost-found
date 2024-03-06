@@ -14,7 +14,6 @@
       placeholder="请输入文字"
       style="margin-bottom: 0" />
   </view>
-
   <t-button
     size="large"
     theme="primary"
