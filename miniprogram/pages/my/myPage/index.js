@@ -9,5 +9,10 @@ Page({
     wx.navigateTo({
       url: "/pages/my/lostRecord/index"
     });
+  },
+  toFoundRecord() {
+    wx.navigateTo({
+      url: "/pages/my/foundRecord/index"
+    });
   }
 });

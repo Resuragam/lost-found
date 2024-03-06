@@ -1,8 +1,10 @@
 /* pages/my/foundRecord/index.wxss */
-.foundRecord-conatiner {
-  padding: 8px;
+.custom-navbar {
+  --td-navbar-color: #222b4a !important;
+  --td-navbar-bg-color: #fff !important;
 }
+
 .record-time-text {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #999999;
 }

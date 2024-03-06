@@ -38,7 +38,9 @@
         </view>
       </view>
     </t-col>
-    <t-col span="12">
+    <t-col
+      span="12"
+      bind:tap="toFoundRecord">
       <view
         class="record-card-container"
         style="margin-left: 16rpx">
