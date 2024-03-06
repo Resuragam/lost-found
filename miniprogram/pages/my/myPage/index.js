@@ -5,6 +5,9 @@ Page({
     nickName: "测试名称",
     avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png"
   },
+  onShow() {
+    this.getTabBar().init();
+  },
   toLostRecord() {
     wx.navigateTo({
       url: "/pages/my/lostRecord/index"

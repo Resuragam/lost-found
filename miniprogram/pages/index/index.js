@@ -1,4 +1,7 @@
 Page({
+  onShow() {
+    this.getTabBar().init();
+  },
   toRangeSelect() {
     wx.navigateTo({
       url: "/pages/range/index"

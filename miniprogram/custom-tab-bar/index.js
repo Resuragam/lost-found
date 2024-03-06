@@ -11,10 +11,10 @@ Component({
         url: "/pages/index/index"
       },
       {
-        url: "/pages/test/index"
+        url: "/pages/my/myPage/index"
       }
     ],
-    visible: true
+    visible: false
   },
   //  组件的方法列表
   methods: {
@@ -34,6 +34,21 @@ Component({
       this.setData({
         visible: true
       });
+    },
+    toPublishLost() {
+      wx.navigateTo({
+        url: "/pages/issuance/publishLost/index",
+      })
+    },
+    toPublishFound() {
+      wx.navigateTo({
+        url: "/pages/issuance/publishFound/index",
+      })
+    },
+    closeOverload() {
+      this.setData({
+        visible: false
+      })
     }
   }
 });

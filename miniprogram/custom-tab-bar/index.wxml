@@ -23,10 +23,9 @@
 <t-overlay
   class="custom-overlay"
   visible="{{visible}}"
-  duration="{{500}}"
-  bind:click="handleOverlayClick">
+  duration="{{500}}">
   <view class="operate-container">
-    <view class="publish-container">
+    <view class="publish-container" bind:tap="toPublishLost">
       <view
         class="operate-icon-box"
         style="background-color: #ea8932">
@@ -40,7 +39,7 @@
         <view class="operate-text-tips">让大家帮忙找找</view>
       </view>
     </view>
-    <view class="publish-container">
+    <view class="publish-container" bind:tap="toPublishFound">
       <view
         class="operate-icon-box"
         style="background-color: #75a4ff">
@@ -56,7 +55,8 @@
     </view>
     <view
       class="operate-icon-box"
-      style="background-color: #ffffff">
+      style="background-color: #ffffff"
+      bind:tap="closeOverload">
       <t-icon
         name="close"
         size="48rpx"
