@@ -6,25 +6,24 @@
 <view class="page-container">
   <view class="tips-container">
     <view class="problem-title">
-    <text class="problem-title-text">有问题可以联系小程序客服</text>
+      <text class="problem-title-text">有问题可以联系小程序客服</text>
+    </view>
+    <view>
+      <text class="problem-desc-text">
+        1. 客服在线时间 9:30 - 18:00 \n2. 有问题欢迎随时咨询
+      </text>
+    </view>
+    <t-divider />
+    <view class="problem-contact-container">
+      <text class="contact-wx-text">微信客服号：18837779999</text>
+      <t-button
+        plain
+        type="info"
+        size="medium"
+        theme="light"
+        round>
+        复制微信号
+      </t-button>
+    </view>
   </view>
-  <view>
-    <text class="problem-desc-text">
-      1. 客服在线时间 9:30 - 18:00 \n2. 有问题欢迎随时咨询
-    </text>
-  </view>
-  <t-divider />
-  <view class="problem-contact-container">
-    <text class="contact-wx-text">微信客服号：18837779999</text>
-    <t-button
-      plain
-      type="info"
-      size="medium"
-      theme="light"
-      round>
-      复制微信号
-    </t-button>
-  </view>
-  </view>
-  
 </view>
