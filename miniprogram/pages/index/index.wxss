@@ -1,10 +1,15 @@
 /**index.wxss**/
+.custom-navbar {
+  --td-navbar-color: #222b4a !important;
+  --td-navbar-bg-color: linear-gradient(to left, #b4cae8, #92a6f1, #b4cae8) !important;
+}
+
 .search-module {
   background-image: linear-gradient(to left, #b4cae8, #92a6f1, #b4cae8);
   padding: 8rpx;
 }
 .white-search-input {
-  background-color: #ffffff !important;
+  background-color: rgb(255, 255, 255, 60%) !important;
 }
 .article-container {
   padding: 8px;

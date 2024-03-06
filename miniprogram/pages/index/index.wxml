@@ -1,4 +1,7 @@
 <!-- index.wxml -->
+<navigation-bar
+  title="失物招领小程序"
+  custom-navbar="custom-navbar"></navigation-bar>
 <view>
   <view class="search-module">
     <t-search
@@ -13,13 +16,13 @@
           <van-cell
             title="寻物招领"
             label="寻找在校丢失物品"
-            bind:tap="toFoundSpace" />
+            bind:tap="toIssuancePublishLost" />
         </van-col>
         <van-col span="12">
           <van-cell
             title="失物招领"
             label="丢失物品寻找主人"
-            bind:tap="toIssuancePublishLost" />
+            bind:tap="toIssuancePublishFound" />
         </van-col>
       </van-row>
     </view>
