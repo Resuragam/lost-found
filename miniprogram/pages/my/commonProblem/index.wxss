@@ -1,9 +1,14 @@
 /* pages/my/commonProblem/index.wxss */
-.problem-container {
-  border-radius: 12px;
-  margin: 0px 12px;
-  background-color: #ffffff;
-  padding: 12px;
+.custom-navbar {
+  --td-navbar-color: #222b4a !important;
+  --td-navbar-bg-color: #fff !important;
+}
+
+.tips-container {
+  margin: 32rpx 0;
+  background-color: #fff;
+  padding: 32rpx;
+  border-radius: 32rpx;
 }
 
 .problem-title {
@@ -14,10 +19,15 @@
 
 .problem-title-text {
   color: #222b4a;
+  font-size: 32rpx;
+}
+
+.t-divider {
+  margin: 48rpx 0 !important;
 }
 
 .problem-desc-text {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #999999;
 }
 

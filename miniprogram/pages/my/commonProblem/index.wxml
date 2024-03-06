@@ -1,22 +1,30 @@
 <!-- pages/my/commonProblem/index.wxml -->
-<view class="problem-container">
-  <view class="problem-title">
+<navigation-bar
+  title="常见问题"
+  leftArrow="{{true}}"
+  custom-navbar="custom-navbar"></navigation-bar>
+<view class="page-container">
+  <view class="tips-container">
+    <view class="problem-title">
     <text class="problem-title-text">有问题可以联系小程序客服</text>
   </view>
   <view>
     <text class="problem-desc-text">
-      1. 客服在线时间 9:30 - 18:00 2. 有问题欢迎随时咨询
+      1. 客服在线时间 9:30 - 18:00 \n2. 有问题欢迎随时咨询
     </text>
   </view>
-  <van-divider />
+  <t-divider />
   <view class="problem-contact-container">
     <text class="contact-wx-text">微信客服号：18837779999</text>
-    <van-button
+    <t-button
       plain
       type="info"
-      size="small"
+      size="medium"
+      theme="light"
       round>
       复制微信号
-    </van-button>
+    </t-button>
   </view>
+  </view>
+  
 </view>
