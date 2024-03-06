@@ -1,4 +1,9 @@
 /* pages/my/info/index.wxss */
+.custom-navbar {
+  --td-navbar-color: #222b4a !important;
+  --td-navbar-bg-color: #fff !important;
+}
+
 .avatar-container {
   display: flex;
   justify-content: center;

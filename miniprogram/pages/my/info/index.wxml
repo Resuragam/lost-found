@@ -1,5 +1,9 @@
 <!--pages/my/info/index.wxml-->
-<view>
+<navigation-bar
+  title="个人资料"
+  leftArrow="{{true}}"
+  custom-navbar="custom-navbar"></navigation-bar>
+<view class="page-container">
   <view class="avatar-container">
     <image
       class="avatar-image"

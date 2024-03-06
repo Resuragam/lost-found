@@ -52,7 +52,7 @@
       </view>
     </t-col>
   </t-row>
-  <t-cell-group theme="default">
+  <t-cell-group theme="card">
     <t-cell
       title="学校绑定"
       leftIcon="city-14"

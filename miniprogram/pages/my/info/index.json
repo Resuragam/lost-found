@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "个人资料",
   "usingComponents": {
+    "navigation-bar": "/components/navigationBar/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index"
   }

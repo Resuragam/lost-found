@@ -34,6 +34,7 @@
   width: 150vw;
   height: 200rpx;
 }
+
 .myPage-container .gif-wave {
   position: absolute;
   width: 150vw;
@@ -59,7 +60,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 24rpx;
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 
 .record-title-text {
@@ -73,6 +74,7 @@
   color: #323232;
 }
 
-.t-cell {
-  background-color: #fcfcfc !important;
+.t-cell-group--card {
+  margin: 0 !important;
+  border-radius: 24rpx !important;
 }
