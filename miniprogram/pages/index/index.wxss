@@ -1,18 +1,64 @@
 /**index.wxss**/
 .custom-navbar {
   --td-navbar-color: #222b4a !important;
-  --td-navbar-bg-color: linear-gradient(to left, #b4cae8, #92a6f1, #b4cae8) !important;
+  --td-navbar-bg-color: linear-gradient(
+    to left,
+    #b4cae8,
+    #92a6f1,
+    #b4cae8
+  ) !important;
 }
 
 .search-module {
   background-image: linear-gradient(to left, #b4cae8, #92a6f1, #b4cae8);
-  padding: 8rpx;
+  padding: 32rpx;
 }
+
 .white-search-input {
-  background-color: rgb(255, 255, 255, 60%) !important;
+  background-color: rgba(243, 242, 242, 0.6) !important;
+  --td-search-icon-color: #000;
+  margin-bottom: 36rpx;
 }
+
+.search-entrance-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24rpx;
+  padding: 24rpx;
+}
+
+.lost-card-bg {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(110, 128, 158) 0%,
+    rgb(151, 167, 192) 60%,
+    rgb(164, 180, 203) 100%
+  );
+}
+
+.found-card-bg {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(14, 90, 211) 0%,
+    rgb(55, 116, 225) 60%,
+    rgb(107, 149, 243) 100%
+  );
+}
+
+.search-entrance-title {
+  font-size: 32rpx;
+  color: #ffffff;
+  margin-bottom: 8rpx;
+}
+
+.search-entrance-tips {
+  font-size: 24rpx;
+  color: #ffffff;
+}
+
 .article-container {
-  padding: 8px;
+  font-size: 32rpx;
 }
 
 .lost-range-container {

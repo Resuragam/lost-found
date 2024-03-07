@@ -64,8 +64,8 @@
   </view>
 
   <t-button
-  class="custom-button"
-  block>
-  立即发布
-</t-button>
+    class="custom-button"
+    block>
+    立即发布
+  </t-button>
 </view>

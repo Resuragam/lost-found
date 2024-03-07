@@ -11,20 +11,38 @@
       placeholder="请输入内容"
       bind:tap="toSearchLost" />
     <view class="search-quick-entrance-cell">
-      <van-row gutter="16">
-        <van-col span="12">
-          <van-cell
-            title="寻物招领"
-            label="寻找在校丢失物品"
-            bind:tap="toIssuancePublishLost" />
-        </van-col>
-        <van-col span="12">
-          <van-cell
-            title="失物招领"
-            label="丢失物品寻找主人"
-            bind:tap="toIssuancePublishFound" />
-        </van-col>
-      </van-row>
+      <t-row gutter="16">
+        <t-col span="12">
+          <view class="search-entrance-card lost-card-bg">
+            <view>
+              <view class="search-entrance-title">寻物招领</view>
+              <view class="search-entrance-tips">寻找在校丢失物品</view>
+            </view>
+            <view>
+              <t-image
+                src="/public/images/lostBox.png"
+                mode="aspectFill"
+                width="42"
+                height="42" />
+            </view>
+          </view>
+        </t-col>
+        <t-col span="12">
+          <view class="search-entrance-card found-card-bg">
+            <view>
+              <view class="search-entrance-title">寻物招领</view>
+              <view class="search-entrance-tips">寻找在校丢失物品</view>
+            </view>
+            <view>
+              <t-image
+                src="/public/images/lostBox.png"
+                mode="aspectFill"
+                width="42"
+                height="42" />
+            </view>
+          </view>
+        </t-col>
+      </t-row>
     </view>
   </view>
   <view class="lost-range-container">
