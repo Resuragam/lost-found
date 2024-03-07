@@ -22,4 +22,6 @@
   </view>
 </view>
 
-<view class="page-container"></view>
+<view class="space-container">
+  <space-card wx:for="{{5}}" wx:key="index"></space-card>
+</view>

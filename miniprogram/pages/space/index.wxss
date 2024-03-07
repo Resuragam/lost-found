@@ -5,11 +5,15 @@
   background-color: white;
   align-items: center;
   padding: 0 32rpx;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .t-tag--default {
-  --td-tag-default-light-color: #F7F8FA;
-  --td-tag-default-font-color: #989898 ;
+  --td-tag-default-light-color: #f7f8fa;
+  --td-tag-default-font-color: #989898;
   --td-tag-medium-font-size: 24rpx;
+}
+
+.space-container {
+  padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
 }
