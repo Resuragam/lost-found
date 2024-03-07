@@ -22,6 +22,11 @@ Page({
       url: "/pages/issuance/publishLost/index"
     });
   },
+  toLostSpace() {
+    wx.navigateTo({
+      url: "/pages/space/index"
+    });
+  },
   toFoundSpace() {
     wx.navigateTo({
       url: "/pages/space/index"

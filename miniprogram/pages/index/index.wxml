@@ -77,7 +77,7 @@
       <view class="lost-range-title-left">寻物发现</view>
       <view
         class="lost-range-title-right"
-        bind:tap="toRangeSelect">
+        bind:tap="toLostSpace">
         查看全部
       </view>
     </view>
@@ -100,7 +100,7 @@
       <view class="lost-range-title-left">招领发现</view>
       <view
         class="lost-range-title-right"
-        bind:tap="toRangeSelect">
+        bind:tap="toFoundSpace">
         查看全部
       </view>
     </view>

@@ -1,7 +1,25 @@
 <!--pages/space/index.wxml-->
 <navigation-bar
-  title="范围查找"
+  title="失物招领"
   leftArrow="{{true}}"></navigation-bar>
-<view class="page-container">
-  <view></view>
+<view class="navbar-container">
+  <t-tabs
+    defaultValue="{{0}}"
+    split="{{false}}"
+    theme="tag">
+    <t-tab-panel
+      wx:for="{{2}}"
+      wx:key="index"
+      label="选项"
+      value="{{index}}" />
+  </t-tabs>
+  <view>
+    <t-tag
+      variant="light"
+      icon="map">
+      标签文字
+    </t-tag>
+  </view>
 </view>
+
+<view class="page-container"></view>
