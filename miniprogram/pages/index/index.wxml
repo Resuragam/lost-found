@@ -19,7 +19,7 @@
           </view>
           <view>
             <t-image
-              src="/public/images/lostBox.png"
+              src="https://s3-alpha-sig.figma.com/img/ecd4/d720/33f6fbfc67e634bf830eb78e7c0e2eaf?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q2WQ9EJ~LR46x3F56IVccwdo0YrcKsLbHVQpcVycJLVZg-fmPQcW0wNd-HfdsDweWJXKwzDHFqbv-t8vAOgXYQfVSI7~nfHBY2UUPI6EuTaTFrW5-L1JMFhv6SdQdZk8VPYDCwGBxmAywDfsnYoVYx0SxWcrGDCyisXgEoi6wJ9mu6ttXPPGpXrYwxfOGDC0QBcmmMirJz~CsDKUAs0ix49XeoF6tdw-OYOFLaHD2om3A6GsUpyJUNE1krgZYSLfRsql4kXutKhlaodcCmx5Jvjd9yrCiaB9eRbnd8woWJ4H1TTgJaOPkzP2tjx7YqsLXeyIuqEpBHP22PdGHwYIqA__"
               mode="aspectFill"
               width="42"
               height="42" />
@@ -34,7 +34,7 @@
           </view>
           <view>
             <t-image
-              src="/public/images/lostBox.png"
+              src="https://s3-alpha-sig.figma.com/img/c506/682b/b52dadea0d87b9f3dadca847c471cc8d?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=N4yKn7Ef2TyFZ7j~LEFeXfIFy-Y8YCY4nH~~fXSiL9oLcUG7bxQ6AK6L5oVU6~UcQHoCDDxBzs~W1JlzO~GC8TWZ85MC-CjU2ALTVU~OOk~HI~0VNIWAvcnG8LZnxc576SfOThLUQqeThmjsmNqbsEkNo5JklnmhZ516a7HS5MmL6oJu0jLjIngOYceu1q-ZArRh48mbiIn9LGOARhuk8j5IRhQ3a91eqGbe4VcAI1dytHbg7AlhDfVT~OT4A6dBfl1a3XGLMAAW6onEYeN9jH3DjZM1dzj8BwKe43r8TEJ8bLy3HeeU32QEbD16mQg9wKofujc7H2JtV6RQAvkRcw__              "
               mode="aspectFill"
               width="42"
               height="42" />
