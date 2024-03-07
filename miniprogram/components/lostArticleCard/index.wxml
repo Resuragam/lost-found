@@ -1,5 +1,7 @@
 <!--components/lostArticleCard/index.wxml-->
-<view class="lostArticleCard">
+<view
+  class="lostArticleCard"
+  style="{{block ? 'display: flex' : 'display: inline-flex'}}">
   <view class="lostArticleCard-image-container">
     <image
       class="lostArticleCard-image"

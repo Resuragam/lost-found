@@ -1,1 +1,11 @@
 /* pages/test/index.wxss */
+.test-container {
+  padding: 100rpx 32rpx;
+}
+
+.range-place-tag {
+  --td-tag-large-height: 80rpx;
+  --td-tag-primary-color: #4584ff;
+  margin-right: 24rpx;
+  --td-tag-large-font-size: 24rpx;
+}

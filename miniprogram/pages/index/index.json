@@ -1,10 +1,10 @@
 {
   "usingComponents": {
     "navigation-bar": "/components/navigationBar/index",
-    "van-search": "@vant/weapp/search/index",
     "t-row": "tdesign-miniprogram/row/row",
     "t-col": "tdesign-miniprogram/col/col",
     "t-image": "tdesign-miniprogram/image/image",
+    "t-tag": "tdesign-miniprogram/tag/tag",
     "van-cell": "@vant/weapp/cell/index",
     "van-tag": "@vant/weapp/tag/index",
     "van-tab": "@vant/weapp/tab/index",

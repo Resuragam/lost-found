@@ -3,9 +3,9 @@
   --td-navbar-color: #222b4a !important;
   --td-navbar-bg-color: linear-gradient(
     to left,
-    #b4cae8,
-    #92a6f1,
-    #b4cae8
+    rgb(180, 202, 232),
+    rgb(146, 166, 241),
+    rgb(180, 202, 232)
   ) !important;
 }
 
@@ -18,6 +18,10 @@
   background-color: rgba(243, 242, 242, 0.6) !important;
   --td-search-icon-color: #000;
   margin-bottom: 36rpx;
+}
+
+.search-entrance-container {
+  margin-bottom: 48rpx;
 }
 
 .search-entrance-card {
@@ -62,28 +66,32 @@
 }
 
 .lost-range-container {
-  background-color: #ffffff;
-  margin: 8px;
-  border-radius: 4px;
+  border-radius: 32rpx;
+  padding: 28rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
 }
 
-.lost-range-tag-list {
-  width: 1000px;
-  overflow-x: auto;
+.lost-range-title-left {
+  font-size: 32rpx;
+  color: #222b4a;
+}
+
+.lost-range-title-right {
+  font-size: 24rpx;
+  color: #4584ff;
 }
 
 .lost-range-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  margin-bottom: 28rpx;
 }
 
-.lost-range-title-left {
-  font-size: 12px;
-}
-
-.lost-range-title-right {
-  font-size: 8px;
-  color: #4584ff;
+.range-place-tag {
+  --td-tag-large-height: 80rpx;
+  --td-tag-primary-color: #4584ff;
+  margin-right: 24rpx;
+  --td-tag-large-font-size: 24rpx;
 }

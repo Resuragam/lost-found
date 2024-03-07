@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "t-tag": "tdesign-miniprogram/tag/tag",
+    "lost-article-card": "../../components/lostArticleCard/index"
+  }
 }

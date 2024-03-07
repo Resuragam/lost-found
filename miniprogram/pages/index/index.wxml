@@ -2,102 +2,75 @@
 <navigation-bar
   title="失物招领小程序"
   custom-navbar="custom-navbar"></navigation-bar>
-<view>
-  <view class="search-module">
-    <t-search
-      t-class-input-container="white-search-input"
-      value="{{ searchValue }}"
-      shape="round"
-      placeholder="请输入内容"
-      bind:tap="toSearchLost" />
-    <view class="search-quick-entrance-cell">
-      <t-row gutter="16">
-        <t-col span="12">
-          <view class="search-entrance-card lost-card-bg">
-            <view>
-              <view class="search-entrance-title">寻物招领</view>
-              <view class="search-entrance-tips">寻找在校丢失物品</view>
-            </view>
-            <view>
-              <t-image
-                src="/public/images/lostBox.png"
-                mode="aspectFill"
-                width="42"
-                height="42" />
-            </view>
+<view class="search-module">
+  <t-search
+    t-class-input-container="white-search-input"
+    value="{{ searchValue }}"
+    shape="round"
+    placeholder="请输入内容"
+    bind:tap="toSearchLost" />
+  <view class="search-entrance-container">
+    <t-row gutter="16">
+      <t-col span="12">
+        <view class="search-entrance-card lost-card-bg">
+          <view>
+            <view class="search-entrance-title">寻物招领</view>
+            <view class="search-entrance-tips">寻找在校丢失物品</view>
           </view>
-        </t-col>
-        <t-col span="12">
-          <view class="search-entrance-card found-card-bg">
-            <view>
-              <view class="search-entrance-title">寻物招领</view>
-              <view class="search-entrance-tips">寻找在校丢失物品</view>
-            </view>
-            <view>
-              <t-image
-                src="/public/images/lostBox.png"
-                mode="aspectFill"
-                width="42"
-                height="42" />
-            </view>
+          <view>
+            <t-image
+              src="/public/images/lostBox.png"
+              mode="aspectFill"
+              width="42"
+              height="42" />
           </view>
-        </t-col>
-      </t-row>
-    </view>
+        </view>
+      </t-col>
+      <t-col span="12">
+        <view class="search-entrance-card found-card-bg">
+          <view>
+            <view class="search-entrance-title">寻物招领</view>
+            <view class="search-entrance-tips">寻找在校丢失物品</view>
+          </view>
+          <view>
+            <t-image
+              src="/public/images/lostBox.png"
+              mode="aspectFill"
+              width="42"
+              height="42" />
+          </view>
+        </view>
+      </t-col>
+    </t-row>
   </view>
+</view>
+<view class="index-container">
   <view class="lost-range-container">
     <view class="lost-range-title">
-      <text class="lost-range-title-left">丢失范围</text>
-      <text
+      <view class="lost-range-title-left">丢失范围</view>
+      <view
         class="lost-range-title-right"
         bind:tap="toRangeSelect">
         范围寻找
-      </text>
+      </view>
     </view>
-    <view class="lost-range-tag-list">
-      <van-tag
-        plain
-        type="primary"
+    <scroll-view
+      enhanced="{{true}}"
+      show-scrollbar="{{false}}"
+      enable-flex
+      style="flex-direction: row; white-space: nowrap"
+      scroll-x>
+      <t-tag
+        wx:for="{{10}}"
+        wx:key="index"
+        class="range-place-tag"
+        variant="light"
+        theme="primary"
+        shape="round"
         size="large">
-        足球操场
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        足球操场
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        足球操场
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        足球操场
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        标签
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        足球操场
-      </van-tag>
-      <van-tag
-        plain
-        type="primary"
-        size="large">
-        足球操场
-      </van-tag>
-    </view>
+        测试场地
+      </t-tag>
+    </scroll-view>
   </view>
   <view class="article-container">
     <van-tabs sticky>
