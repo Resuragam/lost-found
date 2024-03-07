@@ -72,22 +72,50 @@
       </t-tag>
     </scroll-view>
   </view>
-  <view class="article-container">
-    <van-tabs sticky>
-      <van-tab title="寻物发现">
-        <view class="lost-article-list">
-          <lost-article-card
-            wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
-            wx:key="index"></lost-article-card>
-        </view>
-      </van-tab>
-      <van-tab title="失物招领">
-        <view class="lost-article-list">
-          <lost-article-card
-            wx:for="{{ [1, 2, 3, 4, 5] }}"
-            wx:key="index"></lost-article-card>
-        </view>
-      </van-tab>
-    </van-tabs>
+  <view class="lost-range-container">
+    <view class="lost-range-title">
+      <view class="lost-range-title-left">寻物发现</view>
+      <view
+        class="lost-range-title-right"
+        bind:tap="toRangeSelect">
+        查看全部
+      </view>
+    </view>
+    <scroll-view
+      enhanced="{{true}}"
+      show-scrollbar="{{false}}"
+      enable-flex
+      style="flex-direction: row; white-space: nowrap"
+      scroll-x>
+      <view
+        wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
+        wx:key="index"
+        class="lost-card-container">
+        <lost-article-card block="{{false}}"></lost-article-card>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="lost-range-container">
+    <view class="lost-range-title">
+      <view class="lost-range-title-left">招领发现</view>
+      <view
+        class="lost-range-title-right"
+        bind:tap="toRangeSelect">
+        查看全部
+      </view>
+    </view>
+    <scroll-view
+      enhanced="{{true}}"
+      show-scrollbar="{{false}}"
+      enable-flex
+      style="flex-direction: row; white-space: nowrap"
+      scroll-x>
+      <view
+        wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
+        wx:key="index"
+        class="lost-card-container">
+        <lost-article-card block="{{false}}"></lost-article-card>
+      </view>
+    </scroll-view>
   </view>
 </view>

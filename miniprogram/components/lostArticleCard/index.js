@@ -6,7 +6,7 @@ Component({
   properties: {
     block: {
       type: Boolean,
-      value: true,
+      value: true
     }
   },
 

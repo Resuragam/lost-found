@@ -14,6 +14,10 @@
   padding: 32rpx;
 }
 
+.index-container {
+  padding-bottom: calc(112rpx + env(safe-area-inset-bottom));
+}
+
 .white-search-input {
   background-color: rgba(243, 242, 242, 0.6) !important;
   --td-search-icon-color: #000;
@@ -94,4 +98,11 @@
   --td-tag-primary-color: #4584ff;
   margin-right: 24rpx;
   --td-tag-large-font-size: 24rpx;
+}
+
+.lost-card-container {
+  border: #f1f1f1 1px solid;
+  display: inline-flex;
+  margin-right: 24rpx;
+  border-radius: 24rpx;
 }
