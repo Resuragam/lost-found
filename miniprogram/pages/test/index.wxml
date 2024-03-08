@@ -1,12 +1,4 @@
 <!--pages/test/index.wxml-->
 <view class="test-container">
-  <scroll-view
-    enable-flex
-    style="flex-direction: row; white-space: nowrap"
-    scroll-x>
-    <lost-article-card
-      block="{{false}}"
-      wx:for="{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }}"
-      wx:key="index"></lost-article-card>
-  </scroll-view>
+  测试环境
 </view>

@@ -2,12 +2,6 @@
 App({
   onLaunch: function () {
     // 导航栏数据初始化
-    const systemInfo = wx.getSystemInfoSync();
-    const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
-    this.globalData.navBarHeight = systemInfo.statusBarHeight + 44;
-    this.globalData.menuRight = systemInfo.screenWidth - menuButtonInfo.right;
-    this.globalData.menuTop = menuButtonInfo.top;
-    this.globalData.menuHeight = menuButtonInfo.height;
     // 云函数环境初始化
     if (!wx.cloud) {
       console.error("请使用 2.2.3 或以上的基础库以使用云能力");
@@ -23,9 +17,8 @@ App({
     }
   },
   globalData: {
-    navBarHeight: 0,
-    menuRight: 0,
-    menuTop: 0,
-    menuHeight: 0
+    userInfo: {
+      
+    }
   }
 });

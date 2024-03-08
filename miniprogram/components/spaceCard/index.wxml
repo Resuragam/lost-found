@@ -14,7 +14,7 @@
         variant="light"
         theme="primary"
         shape="round">
-        查看全部
+        查看详情
       </t-tag>
     </view>
   </view>
