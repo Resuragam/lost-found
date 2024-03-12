@@ -13,7 +13,8 @@
         class="detail-tag"
         variant="light"
         theme="primary"
-        shape="round">
+        shape="round"
+        bind:tap="toDetail">
         查看详情
       </t-tag>
     </view>

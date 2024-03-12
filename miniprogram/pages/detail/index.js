@@ -1,4 +1,4 @@
-// pages/test/index.js
+// pages/detail/index.js
 const imageCdn = "https://tdesign.gtimg.com/mobile/demos";
 const swiperList = [
   `${imageCdn}/swiper1.png`,
@@ -61,3 +61,4 @@ Page({
    */
   onShareAppMessage() {}
 });
+

@@ -1,5 +1,4 @@
 {
-  "entryPagePath": "pages/test/index",
   "pages": [
     "pages/index/index",
     "pages/my/myPage/index",
@@ -14,7 +13,8 @@
     "pages/searchLost/index",
     "pages/issuance/publishLost/index",
     "pages/space/index",
-    "pages/test/index"
+    "pages/test/index",
+    "pages/detail/index"
   ],
   "window": {
     "navigationStyle": "custom"

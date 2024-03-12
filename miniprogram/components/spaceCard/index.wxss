@@ -65,6 +65,6 @@ image {
 }
 
 .info-space-tag {
-  color: #4584FF;
+  color: #4584ff;
   font-size: 24rpx;
 }

@@ -1,4 +1,4 @@
-/* pages/test/index.wxss */
+/* pages/detail/index.wxss */
 .custom-navbar {
   /* opacity: 0; */
   float: left;

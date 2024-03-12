@@ -1,4 +1,4 @@
-<!--pages/test/index.wxml-->
+<!--pages/detail/index.wxml-->
 <navigation-bar
   title="测试"
   leftArrow="{{true}}"
