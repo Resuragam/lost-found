@@ -5,22 +5,34 @@
   custom-navbar="custom-navbar"></navigation-bar>
 <view class="page-container">
   <view class="avatar-container">
-    <t-avatar
-      image="{{avatarUrl}}"
-      size="large" />
+    <t-button
+      class="avatar-wrapper"
+      open-type="chooseAvatar"
+      hover-class="none"
+      size="large"
+      shape="circle"
+      bindchooseavatar="onChooseAvatar">
+      <t-avatar
+        slot="content"
+        image="{{avatarUrl}}"
+        size="large" />
+    </t-button>
   </view>
-  <t-cell-group theme="card">
-    <t-cell
-      title="昵称"
-      leftIcon="personal-information"
-      note="测试昵称"
-      hover
-      arrow />
-    <t-cell
-      title="手机号"
-      leftIcon="mobile"
-      note="16670114430"
-      hover
-      arrow />
-  </t-cell-group>
+  <t-input
+    label="昵称"
+    prefixIcon="personal-information"
+    suffixIcon="chevron-right"
+    type="nickname"
+    align="right"
+    model:value="{{nickname}}"
+    placeholder="请输入昵称" />
+  <t-input
+    label="手机号码"
+    borderless="{{true}}"
+    prefixIcon="mobile"
+    suffixIcon="chevron-right"
+    type="nickname"
+    align="right"
+    model:value="{{phoneNumber}}"
+    placeholder="请输入手机号码" />
 </view>

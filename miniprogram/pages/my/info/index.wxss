@@ -10,7 +10,6 @@
   margin: 48rpx 0;
 }
 
-.t-cell-group--card {
-  margin: 0 !important;
-  border-radius: 24rpx !important;
+.avatar-wrapper {
+  --td-button-large-height: 128rpx;
 }

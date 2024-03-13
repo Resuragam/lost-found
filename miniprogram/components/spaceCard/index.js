@@ -16,8 +16,8 @@ Component({
   methods: {
     toDetail: function () {
       wx.navigateTo({
-        url: '/pages/detail/index',
-      })
+        url: "/pages/detail/index"
+      });
     }
   }
 });
