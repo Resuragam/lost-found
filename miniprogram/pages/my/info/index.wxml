@@ -13,7 +13,6 @@
       shape="circle"
       bindchooseavatar="onChooseAvatar">
       <t-avatar
-        slot="content"
         image="{{avatarUrl}}"
         size="large" />
     </t-button>
@@ -35,4 +34,10 @@
     align="right"
     model:value="{{phoneNumber}}"
     placeholder="请输入手机号码" />
+  <t-button
+    block
+    class="custom-button"
+    bind:tap="updateUserInfo">
+    更新
+  </t-button>
 </view>

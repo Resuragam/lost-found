@@ -9,12 +9,16 @@ Page({
   data: {
     avatarUrl: defaultAvatarUrl,
     nickname: defaultNickname,
-    phoneNumber: '',
+    phoneNumber: ""
   },
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail;
+    console.log(avatarUrl);
     this.setData({
       avatarUrl
     });
+  },
+  updateUserInfo() {
+    console.log('updateUserInfo: ', this.data.avatarUrl, this.data.nickname)
   }
 });

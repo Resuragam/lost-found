@@ -1,20 +1,39 @@
+const { getOpendId, login } = require("./api/user");
+const { awaitWrap } = require("./utils/awaitWrap");
+
 // app.js
 App({
-  onLaunch: function () {
+  onLaunch: async function () {
     // 导航栏数据初始化
     // 云函数环境初始化
     if (!wx.cloud) {
       console.error("请使用 2.2.3 或以上的基础库以使用云能力");
     } else {
       wx.cloud.init({
-        // env 参数说明：
-        //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
-        //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
-        //   如不填则使用默认环境（第一个创建的环境）
-        // env: 'my-env-id',
+        env: "lost-found-9gf6k1tce66b0eb1",
         traceUser: true
       });
+
+      // 获取用户 openId
+      const [getOpenIdErr, openId] = await awaitWrap(getOpendId())
+      if(getOpenIdErr) {
+        return wx.showToast({
+          title: '登录失败',
+          icon: "error"
+        })
+      }
+      console.log('openid: ', openId)
+
+      const [loginErr, loginRes] = await awaitWrap(login(openId))
+      if(loginErr) {
+        return wx.showToast({
+          title: '登录失败',
+          icon: "error"
+        })
+      }
+      console.log('loginRes: ', loginRes)
     }
+
   },
   globalData: {
     userInfo: {}

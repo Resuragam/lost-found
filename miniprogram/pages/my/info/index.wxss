@@ -13,3 +13,11 @@
 .avatar-wrapper {
   --td-button-large-height: 128rpx;
 }
+
+.custom-button {
+  background-image: linear-gradient(to left, #6d9dff, #4785ff) !important;
+  --td-button-default-active-bg-color: #4785ff;
+  border: none !important;
+  --td-button-default-color: #fff;
+  margin-top: 48rpx;
+}

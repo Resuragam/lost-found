@@ -1,63 +1,57 @@
-// pages/test/index.js
-const imageCdn = "https://tdesign.gtimg.com/mobile/demos";
-const swiperList = [
-  `${imageCdn}/swiper1.png`,
-  `${imageCdn}/swiper2.png`,
-  `${imageCdn}/swiper1.png`,
-  `${imageCdn}/swiper2.png`,
-  `${imageCdn}/swiper1.png`
-];
 Page({
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    current: 2,
-    autoplay: true,
-    duration: 500,
-    interval: 5000,
-    paginationPosition: "bottom",
-    swiperList,
-    navigation: { type: "dots-bar" }
+  onShareAppMessage() {
+    return {
+      title: '获取用户信息',
+      path: 'packageAPI/pages/api/get-user-info/get-user-info'
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {},
+  data: {
+    theme: 'light',
+    hasUserInfo: false,
+    canIUseGetUserProfile: false
+  },
+  getUserInfo(info) {
+    console.log('getUserInfo')
+    const userInfo = info.detail.userInfo
+    this.setData({
+      userInfo,
+      hasUserInfo: true
+    })
+  },
+  handleGetUserProfile(e) {
+    console.log('getUserProfile')
+    wx.getUserProfile({
+      desc: '用于演示 wx.getUserProfile', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log('wx.getUserProfile: ', res.userInfo)
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
+  },
+  clear() {
+    this.setData({
+      hasUserInfo: false,
+      userInfo: {}
+    })
+  },
+  onLoad() {
+    this.setData({
+      theme: wx.getSystemInfoSync().theme || 'light'
+    })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {}
-});
+    if (wx.onThemeChange) {
+      wx.onThemeChange(({theme}) => {
+        this.setData({theme})
+      })
+    }
+    if (wx.getUserProfile) {
+      this.setData({
+        canIUseGetUserProfile: true
+      })
+    }
+  }
+})
