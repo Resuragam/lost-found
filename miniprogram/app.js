@@ -15,27 +15,32 @@ App({
       });
 
       // 获取用户 openId
-      const [getOpenIdErr, openId] = await awaitWrap(getOpendId())
-      if(getOpenIdErr) {
+      const [getOpenIdErr, openId] = await awaitWrap(getOpendId());
+      if (getOpenIdErr) {
         return wx.showToast({
-          title: '登录失败',
+          title: "登录失败",
           icon: "error"
-        })
+        });
       }
-      console.log('openid: ', openId)
+      console.log("openid: ", openId);
+      wx.setStorageSync("openId", openId);
 
-      const [loginErr, loginRes] = await awaitWrap(login(openId))
-      if(loginErr) {
+      const [loginErr, loginRes] = await awaitWrap(login(openId));
+      if (loginErr) {
         return wx.showToast({
-          title: '登录失败',
+          title: "登录失败",
           icon: "error"
-        })
+        });
       }
-      console.log('loginRes: ', loginRes)
+      console.log("loginRes: ", loginRes);
     }
-
   },
   globalData: {
-    userInfo: {}
+    userInfo: {
+      nickname: "默认名称",
+      avatarUrl:
+        "cloud://lost-found-9gf6k1tce66b0eb1.6c6f-lost-found-9gf6k1tce66b0eb1-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
+      phoneNumber: ""
+    }
   }
 });
