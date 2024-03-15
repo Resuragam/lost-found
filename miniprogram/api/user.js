@@ -14,5 +14,5 @@ export const login = async (openId) => {
       openId
     }
   })
-  return res
+  return res.result.data
 }

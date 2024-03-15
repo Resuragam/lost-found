@@ -9,22 +9,29 @@ const db = cloud.database()
 exports.main = async (event, context) => {
     try {
       const wxContext = cloud.getWXContext()
-      const { data } = await db.collection('user').where({
+
+      // 根据 openId 获取玩家用户信息
+      let { data } = await db.collection('user').where({
         openId: event.openId
       }).get()
-  
+      
+      // 如果没有该 openId 用户，注册用户
       if(!data.length) {
-        const res = await db.collection('user').add({
+        const { _id } = await db.collection('user').add({
           data: {
             openId: event.openId
           }
         })
-        console.log(res)
+        return { data } = await db.collection('user').where({
+          _id,
+        }).get() 
       }
+
       return {
         data
       }
+
     }catch(e) {
-      return new Error (e.message)
+      console.error(e)
     }
 }
