@@ -9,10 +9,10 @@ Page({
     this.getTabBar().init();
   },
   onLoad() {
-    console.log('onload')
+    console.log("onload");
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl,
-      nickname: app.globalData.userInfo.nickname,
+      nickname: app.globalData.userInfo.nickname
     });
   },
   toLostRecord() {

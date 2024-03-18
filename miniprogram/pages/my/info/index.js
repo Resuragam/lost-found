@@ -6,13 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarUrl: '',
-    nickname: '',
-    phoneNumber: ''
+    avatarUrl: "",
+    nickname: "",
+    phoneNumber: ""
   },
   onLoad() {
-    console.log('info page onload...')
-    console.log('info page globaldata', app.globalData.userInfo)
+    console.log("info page onload...");
+    console.log("info page globaldata", app.globalData.userInfo);
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl,
       nickname: app.globalData.userInfo.nickname,

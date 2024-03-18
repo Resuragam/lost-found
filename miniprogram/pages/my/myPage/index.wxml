@@ -1,6 +1,5 @@
 <!--pages/my/myPage/index.wxml-->
-<view
-  class="myPage-container">
+<view class="myPage-container">
   <t-avatar
     image="{{avatarUrl}}"
     size="large" />
