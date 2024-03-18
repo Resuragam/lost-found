@@ -32,7 +32,11 @@ App({
           icon: "error"
         });
       }
+      this.globalData.userInfo.nickname = loginRes[0].nickname
+      this.globalData.userInfo.avatarUrl = loginRes[0].avatar
+      this.globalData.userInfo.phoneNumber = loginRes[0].phoneNumber
       console.log("loginRes: ", loginRes);
+      console.log('globalData: ', this.globalData.userInfo)
     }
   },
   globalData: {

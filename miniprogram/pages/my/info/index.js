@@ -12,6 +12,7 @@ Page({
   },
   onLoad() {
     console.log('info page onload...')
+    console.log('info page globaldata', app.globalData.userInfo)
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl,
       nickname: app.globalData.userInfo.nickname,
