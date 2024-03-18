@@ -1,12 +1,11 @@
 <!--pages/my/myPage/index.wxml-->
 <view
-  class="myPage-container"
-  style="{{bgColor}}">
+  class="myPage-container">
   <t-avatar
     image="{{avatarUrl}}"
     size="large" />
   <view class="nickName-container">
-    <text>{{nickName}}</text>
+    <text>{{nickname}}</text>
   </view>
   <view class="girfather">
     <image

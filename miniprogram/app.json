@@ -1,5 +1,4 @@
 {
-  "entryPagePath": "pages/my/myPage/index",
   "pages": [
     "pages/index/index",
     "pages/my/myPage/index",

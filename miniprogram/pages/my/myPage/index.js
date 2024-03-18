@@ -2,11 +2,18 @@
 const app = getApp();
 Page({
   data: {
-    nickName: "测试名称",
+    nickname: "测试名称",
     avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png"
   },
   onShow() {
     this.getTabBar().init();
+  },
+  onLoad() {
+    console.log('onload')
+    this.setData({
+      avatarUrl: app.globalData.userInfo.avatarUrl,
+      nickname: app.globalData.userInfo.nickname,
+    });
   },
   toLostRecord() {
     wx.navigateTo({
