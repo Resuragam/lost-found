@@ -1,5 +1,5 @@
 import { updateUserInfo } from "../../../api/user";
-import { uploadFile } from "../../../utils/uploadFile";
+import { deleteFile, uploadFile } from "../../../utils/file";
 
 // pages/my/info/index.js
 const app = getApp();
@@ -32,20 +32,33 @@ Page({
   async updateUserInfo() {
     try {
       const that = this;
-      console.log("updateUserInfo: ", this.data.avatarUrl, this.data.nickname);
+      wx.showLoading({
+        title: "保存中"
+      });
+      if (!this.data.nickname) {
+        return wx.showToast({
+          icon: "none",
+          title: "名称不能为空"
+        });
+      }
+      if (!this.data.phoneNumber) {
+        return wx.showToast({
+          icon: "none",
+          title: "电话号码不能为空"
+        });
+      }
       const openId = wx.getStorageSync("openId");
       let fileId = "";
       // 如果头像更新
       if (this.data.temporaryAvatarUrl) {
+        // 更新新的头像文件
         fileId = await uploadFile(
           this.data.avatarUrl,
-          `user/${openId}`,
-          function (res) {
-            console.log(
-              `用户头像上传进度：${res.progress}%，已上传${res.totalBytesSent}B，共${res.totalBytesExpectedToSend}B`
-            );
-          }
+          `user/${openId}_${Date.now()}`
         );
+
+        // 删除旧头像文件
+        await deleteFile(this.data.avatarUrl);
       }
       const res = await updateUserInfo(
         openId,
@@ -53,6 +66,8 @@ Page({
         fileId,
         this.data.phoneNumber
       );
+      wx.hideLoading();
+
       wx.showToast({
         title: "更新成功",
         icon: "success",
