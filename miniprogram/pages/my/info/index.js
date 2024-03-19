@@ -24,37 +24,53 @@ Page({
   onChooseAvatar(e) {
     // 获取当前文件的临时路径
     const { avatarUrl } = e.detail;
-    console.log(avatarUrl);
     this.setData({
       avatarUrl,
       temporaryAvatarUrl: avatarUrl
     });
   },
   async updateUserInfo() {
-    console.log("updateUserInfo: ", this.data.avatarUrl, this.data.nickname);
-    const openId = wx.getStorageSync("openId");
-    let fileId = "";
-    // 如果头像更新
-    if (this.data.temporaryAvatarUrl) {
-      fileId = await uploadFile(
-        this.data.avatarUrl,
-        `user/${openId}`,
-        function (res) {
-          console.log(
-            `用户头像上传进度：${res.progress}%，已上传${res.totalBytesSent}B，共${res.totalBytesExpectedToSend}B`
-          );
-        }
+    try {
+      const that = this;
+      console.log("updateUserInfo: ", this.data.avatarUrl, this.data.nickname);
+      const openId = wx.getStorageSync("openId");
+      let fileId = "";
+      // 如果头像更新
+      if (this.data.temporaryAvatarUrl) {
+        fileId = await uploadFile(
+          this.data.avatarUrl,
+          `user/${openId}`,
+          function (res) {
+            console.log(
+              `用户头像上传进度：${res.progress}%，已上传${res.totalBytesSent}B，共${res.totalBytesExpectedToSend}B`
+            );
+          }
+        );
+      }
+      const res = await updateUserInfo(
+        openId,
+        this.data.nickname,
+        fileId,
+        this.data.phoneNumber
       );
+      wx.showToast({
+        title: "更新成功",
+        icon: "success",
+        success: function () {
+          app.globalData.userInfo.avatarUrl = fileId
+            ? fileId
+            : that.data.avatarUrl;
+          app.globalData.userInfo.nickname = that.data.nickname;
+          app.globalData.userInfo.phoneNumber = that.data.phoneNumber;
+          console.log("update success: ", app.globalData.userInfo);
+        }
+      });
+    } catch (e) {
+      console.error(e);
+      wx.showToast({
+        title: "更新失败，请稍后重试",
+        icon: "error"
+      });
     }
-    const res = await updateUserInfo(
-      openId,
-      this.data.nickname,
-      fileId,
-      this.data.phoneNumber
-    );
-    wx.showToast({
-      title: "更新成功",
-      icon: "success"
-    });
   }
 });
