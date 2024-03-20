@@ -25,7 +25,7 @@
         style="margin-right: 16rpx">
         <view>
           <view class="record-title-text">失物需求记录</view>
-          <view class="record-num-text">24</view>
+          <view class="record-num-text">{{ lostRecordNum }}</view>
         </view>
         <view>
           <t-image
@@ -44,7 +44,7 @@
         style="margin-left: 16rpx">
         <view>
           <view class="record-title-text">寻物需求记录</view>
-          <view class="record-num-text">24</view>
+          <view class="record-num-text">{{ foundRecordNum }}</view>
         </view>
         <t-image
           src="https://s3-alpha-sig.figma.com/img/785c/1266/c45b40bb4fa192a484a03e86afef58f9?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Bms4sl038IkNDtYjZ1j3-FO9W7ubaG8cghQy5GaWFdOP8Mpwo2knnBcQcM71JIiL3QwIonYUxAD34XsqCUJuwP3pTElxt6ZRLHjwJhl0Heb9yODDhhSLRr~zAHgekZqmtPSfed07waHXaVevh~Q7kBjAeNdD7YW3uU3r0pVF~DhqqxQnhcyoP5hAaPev~OrXEsOXp2dY1bc6eHdZuG329MD1SMOGYB2zk0pPmtAwk0V0drlOYE9RNPIwS8VfLO3dEbY98ybUHZoif5Bps56xL~3KDXmcWS~g9gVLfG9ElbV8P3k6bisnjDYB-AVBKtYUKAo5lx59Lg~7aEe~KIP3ig__          "

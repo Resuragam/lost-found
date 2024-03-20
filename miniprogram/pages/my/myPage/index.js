@@ -3,13 +3,14 @@ const app = getApp();
 Page({
   data: {
     nickname: "测试名称",
-    avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+    avatarUrl: "https://tdesign.gtimg.com/mobile/demos/avatar1.png",
+    lostRecordNum: 0,
+    foundRecordNum: 0
   },
   onShow() {
     this.getTabBar().init();
   },
   onLoad() {
-    console.log("onload");
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl,
       nickname: app.globalData.userInfo.nickname
