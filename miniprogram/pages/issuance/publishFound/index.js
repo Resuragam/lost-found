@@ -10,5 +10,12 @@ Page({
     phoneNumber: "",
     desc: "",
     imageList: []
+  },
+
+  /**
+   * 发布寻物信息
+   */
+  handlePublish() {
+    console.log(this.data);
   }
 });

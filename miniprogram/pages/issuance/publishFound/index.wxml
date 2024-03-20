@@ -71,7 +71,8 @@
 
   <t-button
     class="custom-button"
-    block>
+    block
+    bind:tap="handlePushlish">
     立即发布
   </t-button>
 </view>
