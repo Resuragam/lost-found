@@ -13,41 +13,45 @@
         <view class="input-label-before"></view>
         <view class="input-label-text">寻物标题</view>
       </view>
-      <t-input placeholder="例如：在某某地方丢失了物品" />
+      <t-input
+        model:value="{{title}}"
+        placeholder="例如：在某某地方丢失了物品" />
     </view>
     <view class="input-container">
       <view class="input-label">
         <view class="input-label-before"></view>
         <view class="input-label-text">丢失时间</view>
       </view>
-      <t-cell
-        title="例如：09-10"
-        hover
-        right-icon="time" />
+      <t-input
+        model:value="{{lostTime}}"
+        placeholder="例如：09-10" />
     </view>
     <view class="input-container">
       <view class="input-label">
         <view class="input-label-before"></view>
         <view class="input-label-text">丢失位置</view>
       </view>
-      <t-cell
-        title="地图上也可选择坐标"
-        hover
-        right-icon="map" />
+      <t-input
+        model:value="{{address}}"
+        placeholder="地图上也可选择坐标" />
     </view>
     <view class="input-container">
       <view class="input-label">
         <view class="input-label-before"></view>
         <view class="input-label-text">联系方式</view>
       </view>
-      <t-input placeholder="例如：黄同学 152 2366 2345" />
+      <t-input
+        model:value="{{phoneNumber}}"
+        placeholder="例如：黄同学 152 2366 2345" />
     </view>
     <view class="input-container">
       <view class="input-label">
         <view class="input-label-before"></view>
         <view class="input-label-text">物品描述</view>
       </view>
-      <t-textarea placeholder="请详细描述丢失物品外观" />
+      <t-textarea
+        model:value="{{desc}}"
+        placeholder="请详细描述丢失物品外观" />
     </view>
     <view class="input-container">
       <view class="input-label">
@@ -57,14 +61,15 @@
       <t-upload
         mediaType="{{['image'] }}"
         max="{{ 3 }}"
-        files="{{ fileList }}"
-        bind:add="handleAdd"
-        bind:remove="handleRemove"></t-upload>
+        files="{{ imageList }}"
+        bind:add="handleAddImage"
+        bind:remove="handleRemoveImage"></t-upload>
     </view>
   </view>
   <t-button
     class="custom-button"
-    block>
+    block
+    bind:tap="handlePublishLost">
     立即发布
   </t-button>
 </view>

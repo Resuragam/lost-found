@@ -1,6 +1,18 @@
+import { getSpaceList } from '../../api/sapce'
 Page({
+  data: {
+    spaceList: []
+  },
   onShow() {
     this.getTabBar().init();
+    this.initSpaceList()
+  },
+  async initSpaceList() {
+    const res = await getSpaceList()
+    console.log('[sapce list]', res.result.data)
+    this.setData({
+      spaceList: res.result.data
+    })
   },
   toRangeSelect() {
     wx.navigateTo({

@@ -61,14 +61,14 @@
       style="flex-direction: row; white-space: nowrap"
       scroll-x>
       <t-tag
-        wx:for="{{10}}"
+        wx:for="{{spaceList}}"
         wx:key="index"
         class="range-place-tag"
         variant="light"
         theme="primary"
         shape="round"
         size="large">
-        测试场地
+        {{item.space}}
       </t-tag>
     </scroll-view>
   </view>

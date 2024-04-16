@@ -1,83 +1,91 @@
 // pages/issuance/publishLost/index.js
+import { uploadFile } from "../../../utils/file";
+import { createLostRecord } from "../../../api/issuance";
+
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    mode: "",
-    datetimeVisible: false,
-    datetime: new Date().getTime(),
-    datetimeText: ""
+    title: "",
+    lostTime: "",
+    address: "",
+    phoneNumber: "",
+    desc: "",
+    imageList: [],
+    imageFileList: []
   },
 
-  showPicker(e) {
-    const { mode } = e?.currentTarget?.dataset;
+  /**
+   * 监听上传图片
+   */
+  handleAddImage(e) {
+    const { imageList } = this.data;
+    const { files } = e.detail;
+
+    // 方法1：选择完所有图片之后，统一上传，因此选择完就直接展示
     this.setData({
-      mode,
-      [`${mode}Visible`]: true
+      imageList: [...imageList, ...files] // 此时设置了 fileList 之后才会展示选择的图片
     });
   },
-  hidePicker() {
-    const { mode } = this.data;
+
+  /**
+   * 监听删除图片
+   */
+  handleRemoveImage(e) {
+    const { index } = e.detail;
+    const { imageList } = this.data;
+
+    imageList.splice(index, 1);
     this.setData({
-      [`${mode}Visible`]: false
+      imageList
     });
   },
-  onConfirm(e) {
-    const { value } = e?.detail;
-    const { mode } = this.data;
 
-    console.log("confirm", value);
-
-    this.setData({
-      [mode]: value,
-      [`${mode}Text`]: value
+  /**
+   * 发布失物招领
+   */
+  async handlePublishLost() {
+    wx.showLoading({
+      title: "发布...",
+      mask: true
     });
-
-    this.hidePicker();
+    console.log(this.data);
+    await this.uploadImage();
+    await createLostRecord({
+      title: this.data.title,
+      lostTime: this.data.lostTime,
+      address: this.data.address,
+      phoneNumber: this.data.phoneNumber,
+      desc: this.data.desc,
+      imageFileList: this.data.imageFileList
+    });
+    wx.hideLoading();
+    wx.showToast({
+      title: "发布成功",
+      icon: "success",
+      duration: 1000,
+      mask: false
+    });
   },
 
-  onColumnChange(e) {
-    console.log("pick", e?.detail?.value);
-  },
-
   /**
-   * 生命周期函数--监听页面加载
+   * 上传多张图片
    */
-  onLoad(options) {},
+  uploadImage: async function () {
+    const { imageList } = this.data;
+    const openId = wx.getStorageSync("openId");
+    const taskQueue = [];
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {}
+    console.log(imageList);
+    for (let i = 0; i < imageList.length; i++) {
+      taskQueue.push(
+        uploadFile(imageList[i].url, `lost_record/${openId}_${Date.now()}`)
+      );
+    }
+    const imageFileList = await Promise.all(taskQueue);
+    this.setData({
+      imageFileList
+    });
+  }
 });

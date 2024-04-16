@@ -22,20 +22,18 @@
         <view class="input-label-before"></view>
         <view class="input-label-text">拾取时间</view>
       </view>
-      <t-cell
-        :title="{{time}}"
-        hover
-        right-icon="time" />
+      <t-input
+        model:value="{{foundTime}}"
+        placeholder="例如：09-10" />
     </view>
     <view class="input-container">
       <view class="input-label">
         <view class="input-label-before"></view>
         <view class="input-label-text">拾取位置</view>
       </view>
-      <t-cell
-        :title="{{address}}"
-        hover
-        right-icon="map" />
+      <t-input
+        model:value="{{address}}"
+        placeholder="地图上也可选择坐标" />
     </view>
     <view class="input-container">
       <view class="input-label">
@@ -64,15 +62,15 @@
         mediaType="{{['image'] }}"
         max="{{ 3 }}"
         files="{{ imageList }}"
-        bind:add="handleAdd"
-        bind:remove="handleRemove"></t-upload>
+        bind:add="handleAddImage"
+        bind:remove="handleRemoveImage"></t-upload>
     </view>
   </view>
 
   <t-button
     class="custom-button"
     block
-    bind:tap="handlePushlish">
+    bind:tap="handlePublishRecord">
     立即发布
   </t-button>
 </view>
