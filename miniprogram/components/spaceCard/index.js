@@ -3,7 +3,24 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    nickname: {
+      type: String,
+      value: ""
+    },
+    avatar: {
+      type: String,
+      value: ""
+    },
+    address: {
+      type: String,
+      value: ""
+    },
+    imageList: {
+      type: Array,
+      value: ""
+    },
+  },
 
   /**
    * 组件的初始数据

@@ -4,26 +4,31 @@
   leftArrow="{{true}}"></navigation-bar>
 <view class="navbar-container">
   <t-tabs
-    defaultValue="{{0}}"
+    defaultValue="lost"
     split="{{false}}"
     theme="tag">
     <t-tab-panel
-      wx:for="{{2}}"
-      wx:key="index"
-      label="选项"
-      value="{{index}}" />
+      label="失物记录"
+      value="lost" />
+    <t-tab-panel
+      label="寻物记录"
+      value="found" />
   </t-tabs>
   <view>
     <t-tag
       variant="light"
       icon="map">
-      标签文字
+      范围选择
     </t-tag>
   </view>
 </view>
 
 <view class="space-container">
   <space-card
-    wx:for="{{5}}"
-    wx:key="index"></space-card>
+    wx:for="{{recordList}}"
+    wx:key="index"
+    nickname="{{item.userNickname}}"
+    avatar="{{item.userAvatar}}"
+    address="{{item.address}}"
+    imageList="{{item.imageList}}"></space-card>
 </view>

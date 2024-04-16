@@ -1,4 +1,4 @@
-import { getSpaceList } from '../../api/sapce'
+import { getSpaceList } from '../../api/space'
 Page({
   data: {
     spaceList: []

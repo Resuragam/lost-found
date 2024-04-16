@@ -5,8 +5,8 @@
       <t-avatar
         class="info-avatar-image"
         size="small"
-        image="https://tdesign.gtimg.com/mobile/demos/avatar1.png" />
-      <view class="info-nickname-text">测试昵称</view>
+        image="{{avatar}}" />
+      <view class="info-nickname-text">{{nickname}}</view>
     </view>
     <view>
       <t-tag
@@ -19,20 +19,16 @@
       </t-tag>
     </view>
   </view>
-  <view class="info-title-text">测试标题测试标题</view>
+  <view class="info-title-text">{{title}}</view>
   <view class="info-image-list">
     <image
+      wx:for="{{imageList}}"
+      wx:key="index"
       mode="aspectFill"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
-    <image
-      mode="aspectFill"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
-    <image
-      mode="aspectFill"
-      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+      src="{{item}}"></image>
   </view>
   <view class="info-tags-container">
     <view class="info-look-num">212浏览</view>
-    <view class="info-space-tag"># 食堂</view>
+    <view class="info-space-tag">#{{address}}</view>
   </view>
 </view>

@@ -58,7 +58,8 @@ Page({
       address: this.data.address,
       phoneNumber: this.data.phoneNumber,
       desc: this.data.desc,
-      imageFileList: this.data.imageFileList
+      imageFileList: this.data.imageFileList,
+      openId: wx.getStorageSync("openId")
     });
     wx.hideLoading();
     wx.showToast({
