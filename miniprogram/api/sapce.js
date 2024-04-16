@@ -1,13 +1,7 @@
 // 用户修改个人信息
-export const updateUserInfo = async (openId, nickname, fileId, phoneNumber) => {
+export const getSpaceList = async () => {
   const res = await wx.cloud.callFunction({
-    name: "updateUserInfo",
-    data: {
-      openId,
-      nickname,
-      fileId,
-      phoneNumber
-    }
+    name: "getSpaceList",
   });
-  return res.result;
+  return res;
 };
