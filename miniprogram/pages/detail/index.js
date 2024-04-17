@@ -1,12 +1,6 @@
+import { getLostRecordDetail, getFoundRecordDetail } from "../../api/space";
+
 // pages/detail/index.js
-const imageCdn = "https://tdesign.gtimg.com/mobile/demos";
-const swiperList = [
-  `${imageCdn}/swiper1.png`,
-  `${imageCdn}/swiper2.png`,
-  `${imageCdn}/swiper1.png`,
-  `${imageCdn}/swiper2.png`,
-  `${imageCdn}/swiper1.png`
-];
 Page({
   /**
    * 页面的初始数据
@@ -17,47 +11,54 @@ Page({
     duration: 500,
     interval: 5000,
     paginationPosition: "bottom",
-    swiperList,
-    navigation: { type: "dots-bar" }
+    navigation: { type: "dots-bar" },
+
+    title: "",
+    imageFileList: [],
+    desc: "",
+    phoneNumber: "",
+    address: "",
+    time: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {},
+  onLoad(options) {
+    const { recordId, isFound } = options;
+    console.log(typeof isFound);
+    if (Number(isFound)) {
+      this.initFoundRecordDetail(recordId);
+    } else {
+      this.initLostRecordDetail(recordId);
+    }
+  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {},
+  async initLostRecordDetail(id) {
+    const res = await getLostRecordDetail(id);
+    const detail = res.data[0];
+    console.log(detail);
+    this.setData({
+      address: detail.address,
+      desc: detail.desc,
+      imageFileList: detail.imageList,
+      phoneNumber: detail.phoneNumber,
+      time: detail.lostTime,
+      title: detail.title
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {}
+  async initFoundRecordDetail(id) {
+    const res = await getFoundRecordDetail(id);
+    const detail = res.data[0];
+    console.log(detail);
+    this.setData({
+      address: detail.address,
+      desc: detail.desc,
+      imageFileList: detail.imageList,
+      phoneNumber: detail.phoneNumber,
+      time: detail.foundTime,
+      title: detail.title
+    });
+  }
 });

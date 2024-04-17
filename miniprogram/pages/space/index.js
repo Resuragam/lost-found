@@ -55,8 +55,14 @@ Page({
     console.log(e);
     const { detail } = e;
     if (detail.value === "lost") {
+      this.setData({
+        tabValue: "lost"
+      });
       this.getLostRecordList();
     } else {
+      this.setData({
+        tabValue: "found"
+      });
       this.getFoundRecordList();
     }
   }

@@ -24,6 +24,14 @@ Component({
       type: Array,
       value: ""
     },
+    recordId: {
+      type: String,
+      value: null
+    },
+    isFound: {
+      type: Boolean,
+      value: false
+    }
   },
 
   /**
@@ -36,8 +44,9 @@ Component({
    */
   methods: {
     toDetail: function () {
+      const isFound = this.properties.isFound ? 1 : 0;
       wx.navigateTo({
-        url: "/pages/detail/index"
+        url: `/pages/detail/index?isFound=${isFound}&recordId=${this.properties.recordId}`
       });
     }
   }

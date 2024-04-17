@@ -35,3 +35,31 @@ export const getLostRecord = async spaceList => {
   });
   return res.result;
 };
+
+/**
+ * 获取指定失物详情
+ * @param {*} recordId id
+ */
+export const getLostRecordDetail = async recordId => {
+  const res = await wx.cloud.callFunction({
+    name: "getLostRecordDetail",
+    data: {
+      recordId
+    }
+  });
+  return res.result;
+};
+
+/**
+ * 获取指定寻物详情
+ * @param {*} recordId id
+ */
+export const getFoundRecordDetail = async recordId => {
+  const res = await wx.cloud.callFunction({
+    name: "getFoundRecordDetail",
+    data: {
+      recordId
+    }
+  });
+  return res.result;
+};

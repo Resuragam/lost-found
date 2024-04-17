@@ -12,22 +12,22 @@
   interval="{{interval}}"
   navigation="{{navigation}}"
   paginationPosition="{{paginationPosition}}"
-  list="{{swiperList}}"></t-swiper>
+  list="{{imageFileList}}"></t-swiper>
 <view class="detail-container">
-  <view class="detail-title">测试测试</view>
-  <view class="detail-time-text">测试测试</view>
+  <view class="detail-title">{{title}}</view>
+  <view class="detail-time-text">时间：{{time}}</view>
   <view class="detail-info-box">
-    <view class="detail-info-title">测试</view>
-    <view class="detail-info-tips">测试</view>
+    <view class="detail-info-title">位置</view>
+    <view class="detail-info-tips">{{address}}</view>
   </view>
   <view class="detail-info-box">
-    <view class="detail-info-title">测试</view>
-    <view class="detail-info-tips">测试</view>
+    <view class="detail-info-title">联系方式</view>
+    <view class="detail-info-tips">{{phoneNumber}}</view>
   </view>
   <view
     class="detail-info-box"
     style="margin-bottom: 0">
-    <view class="detail-info-title">测试</view>
-    <view class="detail-info-tips">测试</view>
+    <view class="detail-info-title">情况说明</view>
+    <view class="detail-info-tips">{{desc}}</view>
   </view>
 </view>

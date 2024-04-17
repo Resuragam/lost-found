@@ -29,6 +29,8 @@
   <space-card
     wx:for="{{recordList}}"
     wx:key="index"
+    isFound="{{tabValue == 'found'}}"
+    recordId="{{item._id}}"
     nickname="{{item.userNickname}}"
     avatar="{{item.userAvatar}}"
     address="{{item.address}}"
