@@ -5,15 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    recordList: []
+    recordList: [],
+    defaultTabValue: "lost",
+    tabValue: "lost"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // this.getFoundRecordList();
-    this.getLostRecordList();
+    console.log(options);
+    const { tab } = options;
+    if (tab === "lost") {
+      this.setData({
+        tabValue: "lost"
+      });
+      this.getLostRecordList();
+    } else {
+      this.setData({
+        tabValue: "found"
+      });
+      this.getFoundRecordList();
+    }
   },
 
   /**

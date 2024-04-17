@@ -4,7 +4,8 @@
   leftArrow="{{true}}"></navigation-bar>
 <view class="navbar-container">
   <t-tabs
-    defaultValue="lost"
+    model:value="{{tabValue}}"
+    defaultValue="{{defaultTabValue}}"
     split="{{false}}"
     theme="tag"
     bind:change="onTabChange">

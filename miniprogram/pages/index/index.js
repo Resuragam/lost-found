@@ -36,12 +36,12 @@ Page({
   },
   toLostSpace() {
     wx.navigateTo({
-      url: "/pages/space/index"
+      url: "/pages/space/index?tab=lost"
     });
   },
   toFoundSpace() {
     wx.navigateTo({
-      url: "/pages/space/index"
+      url: "/pages/space/index?tab=found"
     });
   }
 });
