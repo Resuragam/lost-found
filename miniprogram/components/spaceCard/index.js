@@ -16,6 +16,10 @@ Component({
       type: String,
       value: ""
     },
+    title: {
+      type: String,
+      value: ""
+    },
     imageList: {
       type: Array,
       value: ""

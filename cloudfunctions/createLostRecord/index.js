@@ -15,7 +15,7 @@ exports.main = async (event, context) => {
     const { _id } = await db.collection("lost_record").add({
       data: {
         openId: event.openId,
-        title: event.title.title,
+        title: event.title,
         lostTime: event.lostTime,
         address: event.address,
         phoneNumber: event.phoneNumber,

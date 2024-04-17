@@ -6,7 +6,8 @@
   <t-tabs
     defaultValue="lost"
     split="{{false}}"
-    theme="tag">
+    theme="tag"
+    bind:change="onTabChange">
     <t-tab-panel
       label="失物记录"
       value="lost" />
@@ -30,5 +31,6 @@
     nickname="{{item.userNickname}}"
     avatar="{{item.userAvatar}}"
     address="{{item.address}}"
-    imageList="{{item.imageList}}"></space-card>
+    imageList="{{item.imageList}}"
+    title="{{item.title}}"></space-card>
 </view>

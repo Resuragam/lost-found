@@ -1,8 +1,9 @@
 // 云函数入口文件
 const cloud = require("wx-server-sdk");
 
-cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV }); // 使用当前云环境
+cloud.init({ env: "lost-found-9gf6k1tce66b0eb1" }); // 使用当前云环境
 
+const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   try {
@@ -22,8 +23,8 @@ exports.main = async (event, context) => {
     const processedRecords = lostRecords.list.map(record => {
       if (record.userInfo.length > 0) {
         const user = record.userInfo[0];
-        record.userAvatar = user.avatarUrl; // 用户头像
-        record.userNickname = user.nickName; // 用户昵称
+        record.userAvatar = user.avatar; // 用户头像
+        record.userNickname = user.nickname; // 用户昵称
       }
       delete record.userInfo; // 删除原始的 userInfo 字段
       return record;
