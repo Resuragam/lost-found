@@ -3,18 +3,13 @@
   title="失物招领记录"
   leftArrow="{{true}}"
   custom-navbar="custom-navbar"></navigation-bar>
-<view
-  class="page-container"
-  wx:for="{{ [1, 2, 3] }}"
-  wx:key="index">
-  <van-icon
-    name="guide-o"
-    color="#999999" />
-  <text class="record-time-text">09-27</text>
-  <view>
-    <lost-article-card
-      wx:for="{{ [1, 2, 3] }}"
-      wx:key="index"></lost-article-card>
-  </view>
-  <van-divider />
+<view>
+  <lost-article-card
+    wx:for="{{ lostRecordList }}"
+    wx:key="index"
+    block="{{true}}"
+    title="{{item.title}}"
+    time="{{item.lostTime}}"
+    address="{{item.address}}"
+    image="{{item.imageList[0]}}"></lost-article-card>
 </view>

@@ -10,6 +10,7 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "t-search": "tdesign-miniprogram/search/search",
+    "t-icon": "tdesign-miniprogram/icon/icon",
     "lost-article-card": "../../components/lostArticleCard/index"
   },
   "navigationBarTitleText": "失物招领"

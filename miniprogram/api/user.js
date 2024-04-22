@@ -30,3 +30,31 @@ export const updateUserInfo = async (openId, nickname, fileId, phoneNumber) => {
   });
   return res.result;
 };
+
+/**
+ * 根据 openId 获取当前用户的发布失物记录
+ * @param { string } openId 用户openId
+ */
+export const getUserLostRecord = async (openId) => {
+  const res = await wx.cloud.callFunction({
+    name: "getUserLostRecord",
+    data: {
+      openId
+    }
+  });
+  return res.result;
+}; 
+
+/**
+ * 根据 openId 获取当前用户的发布寻物记录
+ * @param { string } openId 用户openId
+ */
+export const getUserFoundRecord = async (openId) => {
+  const res = await wx.cloud.callFunction({
+    name: "getUserFoundRecord",
+    data: {
+      openId
+    }
+  });
+  return res.result;
+}; 

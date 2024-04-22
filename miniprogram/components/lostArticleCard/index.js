@@ -7,6 +7,22 @@ Component({
     block: {
       type: Boolean,
       value: true
+    },
+    image: {
+      type: String,
+      value: ""
+    },
+    title: {
+      type: String,
+      value: ""
+    },
+    address: {
+      type: String,
+      value: ""
+    },
+    time: {
+      type: String,
+      value: ""
     }
   },
 
