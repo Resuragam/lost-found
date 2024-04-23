@@ -10,7 +10,8 @@ export const getSpaceList = async () => {
 
 /**
  * 获取指定范围的地区寻物列表
- * @param {*} spaceList 地区列表
+ * @param { string } spaceList 地区列表
+ * @param { string } search 搜索关键词
  */
 export const getFoundRecord = async (spaceList, search) => {
   const res = await wx.cloud.callFunction({
@@ -25,7 +26,8 @@ export const getFoundRecord = async (spaceList, search) => {
 
 /**
  * 获取指定范围的地区失物列表
- * @param {*} spaceList 地区列表
+ * @param { string } spaceList 地区列表
+ * @param { string } search 搜索关键词
  */
 export const getLostRecord = async (spaceList, search) => {
   const res = await wx.cloud.callFunction({
@@ -54,7 +56,7 @@ export const getLostRecordDetail = async recordId => {
 
 /**
  * 获取指定寻物详情
- * @param {*} recordId id
+ * @param { string } recordId id
  */
 export const getFoundRecordDetail = async recordId => {
   const res = await wx.cloud.callFunction({

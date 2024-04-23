@@ -7,7 +7,9 @@ Page({
   data: {
     recordList: [],
     defaultTabValue: "lost",
-    tabValue: "lost"
+    tabValue: "lost",
+    search: "",
+    space: ""
   },
 
   /**
@@ -15,15 +17,19 @@ Page({
    */
   onLoad(options) {
     console.log(options);
-    const { tab } = options;
+    const { tab, search, space } = options;
     if (tab === "lost") {
       this.setData({
-        tabValue: "lost"
+        tabValue: "lost",
+        search,
+        space
       });
       this.getLostRecordList();
     } else {
       this.setData({
-        tabValue: "found"
+        tabValue: "found",
+        search,
+        space
       });
       this.getFoundRecordList();
     }
@@ -33,7 +39,7 @@ Page({
    * 获取寻物记录
    */
   async getFoundRecordList() {
-    const { data } = await getFoundRecord();
+    const { data } = await getFoundRecord(this.data.space, this.data.search);
     console.log("获取失物记录", data);
     this.setData({
       recordList: data
@@ -44,7 +50,7 @@ Page({
    * 获取失物记录
    */
   async getLostRecordList() {
-    const { data } = await getLostRecord();
+    const { data } = await getLostRecord(this.data.space, this.data.search);
     console.log("获取失物记录", data);
     this.setData({
       recordList: data

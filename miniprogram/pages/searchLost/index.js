@@ -20,7 +20,7 @@ Page({
 
   toSearchLostRecord() {
     wx.navigateTo({
-      url: "/pages/space/index?tab=lost",
+      url: `/pages/space/index?tab=lost&search=${this.data.searchValue}`,
       complete: result => {
         if (this.data.searchValue) {
           const recordList = Array.from(
@@ -42,9 +42,9 @@ Page({
   },
 
   onClickHistoryRecord(e) {
-    this.toSearchLostRecord();
     this.setData({
       searchValue: e.currentTarget.dataset.search
     });
+    this.toSearchLostRecord();
   }
 });
