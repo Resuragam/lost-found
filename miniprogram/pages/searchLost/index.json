@@ -2,7 +2,8 @@
   "usingComponents": {
     "navigation-bar": "/components/navigationBar/index",
     "t-search": "tdesign-miniprogram/search/search",
-    "t-cell": "tdesign-miniprogram/cell/cell"
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-empty": "tdesign-miniprogram/empty/empty"
   },
   "navigationBarTitleText": "失物招领"
 }

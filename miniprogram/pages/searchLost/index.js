@@ -3,45 +3,48 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    searchHistoryRecordList: [],
+    searchValue: ""
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {},
+  onLoad(options) {
+    const record = wx.getStorageSync("searchHistoryRecordList");
+    this.setData({
+      searchHistoryRecordList: record
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {},
+  toSearchLostRecord() {
+    wx.navigateTo({
+      url: "/pages/space/index?tab=lost",
+      complete: result => {
+        if (this.data.searchValue) {
+          const recordList = Array.from(
+            new Set([
+              this.data.searchValue,
+              ...this.data.searchHistoryRecordList
+            ])
+          );
+          this.setData({
+            searchHistoryRecordList: recordList
+          });
+          wx.setStorage({
+            key: "searchHistoryRecordList",
+            data: this.data.searchHistoryRecordList
+          });
+        }
+      }
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {}
+  onClickHistoryRecord(e) {
+    this.toSearchLostRecord();
+    this.setData({
+      searchValue: e.currentTarget.dataset.search
+    });
+  }
 });

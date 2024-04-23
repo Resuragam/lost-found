@@ -5,12 +5,19 @@
 <view class="search-container">
   <t-search
     placeholder="请输入失物"
-    shape="round" />
+    shape="round"
+    model:value="{{searchValue}}"
+    bind:submit="toSearchLostRecord" />
 </view>
-<view>
+<view wx:if="{{!searchHistoryRecordList.length}}">
+  <t-empty description="暂无相关搜索记录"></t-empty>
+</view>
+<view wx:else>
   <t-cell
-    wx:for="{{20}}"
+    wx:for="{{searchHistoryRecordList}}"
     wx:key="index"
-    title="单行标题"
-    leftIcon="search" />
+    title="{{item}}"
+    leftIcon="search"
+    data-search="{{item}}"
+    bind:tap="onClickHistoryRecord" />
 </view>
