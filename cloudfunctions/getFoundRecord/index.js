@@ -8,6 +8,13 @@ const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   try {
+    let regExPattern;
+    if (!event.search) {
+      regExPattern = new RegExp(".*");
+    } else {
+      let pattern = `${event.search}.*`;
+      regExPattern = new RegExp(pattern, "gi");
+    }
     // 连接失物记录表和用户表
     const foundRecords = await db
       .collection("found_record")
@@ -20,16 +27,20 @@ exports.main = async (event, context) => {
       })
       .end();
     // 处理返回的数据，只保留需要的用户信息字段
-    console.log('foundRecords', foundRecords)
-    const processedRecords = foundRecords.list.map(record => {
-      if (record.userInfo.length > 0) {
-        const user = record.userInfo[0];
-        record.userAvatar = user.avatar;
-        record.userNickname = user.nickname;
-      }
-      delete record.userInfo;
-      return record;
-    });
+    console.log("foundRecords", foundRecords);
+    const processedRecords = foundRecords.list
+      .map(record => {
+        if (record.userInfo.length > 0) {
+          const user = record.userInfo[0];
+          record.userAvatar = user.avatar;
+          record.userNickname = user.nickname;
+        }
+        delete record.userInfo;
+        return record;
+      })
+      .filter(record => regExPattern.test(record.title));
+
+    console.log("processedRecords", processedRecords);
 
     return {
       code: 0,
