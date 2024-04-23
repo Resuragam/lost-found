@@ -3,7 +3,7 @@
   title="失物招领记录"
   leftArrow="{{true}}"
   custom-navbar="custom-navbar"></navigation-bar>
-<view>
+<view class="page-container">
   <lost-article-card
     wx:for="{{ lostRecordList }}"
     wx:key="index"
