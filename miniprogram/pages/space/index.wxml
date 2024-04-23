@@ -25,7 +25,12 @@
   </view>
 </view>
 
-<view class="space-container">
+<t-empty
+  wx:if="{{!recordList.length}}"
+  description="暂无相关搜索记录"></t-empty>
+<view
+  wx:else
+  class="space-container">
   <space-card
     wx:for="{{recordList}}"
     wx:key="index"
