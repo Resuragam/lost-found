@@ -29,7 +29,9 @@ exports.main = async (event, context) => {
             "cloud://lost-found-9gf6k1tce66b0eb1.6c6f-lost-found-9gf6k1tce66b0eb1-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
           phoneNumber: null,
           createTime: serverDate,
-          updateTime: serverDate
+          updateTime: serverDate,
+          lostRecordTotal: 0,
+          foundRecordToatl: 0
         }
       });
       return ({ data } = await db
@@ -40,8 +42,25 @@ exports.main = async (event, context) => {
         .get());
     }
 
+    const lostRes = await db
+      .collection("lost_record")
+      .where({
+        openId: event.openId
+      })
+      .count();
+    const foundRes = await db
+      .collection("found_record")
+      .where({
+        openId: event.openId
+      })
+      .count();
+
     return {
-      data
+      data: {
+        ...data,
+        lostRecordTotal: lostRes.total,
+        foundRecordToatl: foundRes.total
+      }
     };
   } catch (e) {
     console.error(e);
