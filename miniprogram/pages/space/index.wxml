@@ -13,7 +13,7 @@
       label="失物记录"
       value="lost" />
     <t-tab-panel
-      label="寻物记录"
+      label="拾物记录"
       value="found" />
   </t-tabs>
   <view>

@@ -85,7 +85,12 @@ Page({
         title: "发布成功",
         icon: "success",
         duration: 1000,
-        mask: false
+        mask: false,
+        success() {
+          wx.redirectTo({
+            url: '/pages/space/index?tab=lost',          
+          })
+        }
       });
     }catch(err) {
       wx.showToast({
