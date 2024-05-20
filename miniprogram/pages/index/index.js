@@ -49,6 +49,16 @@ Page({
       url: "/pages/space/index?tab=found"
     });
   },
+  toPublishLost() {
+    wx.navigateTo({
+      url: "/pages/issuance/publishLost/index"
+    });
+  },
+  toPublishFound() {
+    wx.navigateTo({
+      url: "/pages/issuance/publishFound/index"
+    });
+  },
   /**
    * 获取寻物记录
    */

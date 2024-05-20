@@ -11,6 +11,8 @@
     "van-tabs": "@vant/weapp/tabs/index",
     "t-search": "tdesign-miniprogram/search/search",
     "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-empty": "tdesign-miniprogram/empty/empty",
+    "t-link": "tdesign-miniprogram/link/link",
     "lost-article-card": "../../components/lostArticleCard/index"
   },
   "navigationBarTitleText": "失物招领"

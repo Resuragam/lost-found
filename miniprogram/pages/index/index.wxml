@@ -100,6 +100,24 @@
           image="{{item.imageList[0]}}"></lost-article-card>
       </view>
     </scroll-view>
+    <t-empty
+      wx:if="{{!lostRecordList.length}}"
+      icon="undertake-transaction">
+      <view slot="description">
+        <t-link
+          size="small"
+          content="暂无失物信息"
+          hover />
+        <t-link
+          size="small"
+          theme="primary"
+          underline
+          content="点击前往发布"
+          suffixIcon="jump"
+          hover
+          bind:tap="toPublishLost" />
+      </view>
+    </t-empty>
   </view>
   <view class="lost-range-container">
     <view class="lost-range-title">
@@ -128,5 +146,23 @@
           image="{{item.imageList[0]}}"></lost-article-card>
       </view>
     </scroll-view>
+    <t-empty
+      wx:if="{{!foundRecordList.length}}"
+      icon="undertake-delivery">
+      <view slot="description">
+        <t-link
+          size="small"
+          content="暂无拾物信息"
+          hover />
+        <t-link
+          size="small"
+          theme="primary"
+          underline
+          content="点击前往发布"
+          suffixIcon="jump"
+          hover
+          bind:tap="toPublishFound" />
+      </view>
+    </t-empty>
   </view>
 </view>
