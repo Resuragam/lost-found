@@ -92,3 +92,7 @@
   border: none !important;
   --td-button-default-color: #fff;
 }
+
+.t-input__control--disabled {
+  color: black !important;
+}

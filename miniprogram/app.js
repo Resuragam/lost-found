@@ -15,6 +15,9 @@ App({
       });
 
       // 获取用户 openId
+      wx.showLoading({
+        title: '登录中...',
+      })
       const [getOpenIdErr, openId] = await awaitWrap(getOpendId());
       if (getOpenIdErr) {
         return wx.showToast({

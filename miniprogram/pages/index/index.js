@@ -6,11 +6,18 @@ Page({
     lostRecordList: [],
     foundRecordList: []
   },
-  onShow() {
+  async onShow() {
+    wx.showLoading({
+      title: '加载中...',
+    })
+    const queue = [
+      this.initSpaceList(),
+      this.getLostRecordList(),
+      this.getFoundRecordList(),
+    ]
     this.getTabBar().init();
-    this.initSpaceList();
-    this.getLostRecordList();
-    this.getFoundRecordList();
+    await Promise.all(queue)
+    wx.hideLoading()
   },
   async initSpaceList() {
     const res = await getSpaceList();

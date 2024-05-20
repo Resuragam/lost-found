@@ -13,7 +13,8 @@ Page({
     phoneNumber: "",
     desc: "",
     imageList: [],
-    imageFileList: []
+    imageFileList: [],
+    timePickerVisible: false,
   },
 
   /**
@@ -88,5 +89,26 @@ Page({
     this.setData({
       imageFileList
     });
+  },
+
+  openTimePicker() {
+    this.setData({
+      timePickerVisible: true
+    })
+  },
+
+  onConfirm(e) {
+    const { value } = e?.detail;
+    console.log('confirm', value);
+    this.setData({
+      lostTime: value
+    })
+    this.hidePicker()
+  },
+
+  hidePicker() {
+    this.setData({
+      timePickerVisible: false
+    })
   }
 });

@@ -24,7 +24,9 @@
       </view>
       <t-input
         model:value="{{foundTime}}"
-        placeholder="例如：09-10" />
+        placeholder="例如：09-10"
+        disabled
+        bind:tap="openTimePicker" />
     </view>
     <view class="input-container">
       <view class="input-label">
@@ -33,7 +35,7 @@
       </view>
       <t-input
         model:value="{{address}}"
-        placeholder="地图上也可选择坐标" />
+        placeholder="请输入丢失位置" />
     </view>
     <view class="input-container">
       <view class="input-label">
@@ -74,3 +76,12 @@
     立即发布
   </t-button>
 </view>
+<t-date-time-picker
+  title="选择物品拾取时间"
+  visible="{{timePickerVisible}}"
+  value="{{foundTime}}"
+  start="2024-01-01 00:00"
+  format="YYYY-MM-DD HH:mm"
+  mode="{{['date', 'minute']}}"
+  bind:confirm="onConfirm"
+  bind:cancel="hidePicker" />

@@ -13,7 +13,8 @@ Page({
     phoneNumber: "",
     desc: "",
     imageList: [],
-    imageFileList: []
+    imageFileList: [],
+    timePickerVisible: false
   },
 
   /**
@@ -87,6 +88,27 @@ Page({
     const imageFileList = await Promise.all(taskQueue);
     this.setData({
       imageFileList
+    });
+  },
+
+  openTimePicker() {
+    this.setData({
+      timePickerVisible: true
+    });
+  },
+
+  onConfirm(e) {
+    const { value } = e?.detail;
+    console.log("confirm", value);
+    this.setData({
+      foundTime: value
+    });
+    this.hidePicker();
+  },
+
+  hidePicker() {
+    this.setData({
+      timePickerVisible: false
     });
   }
 });
