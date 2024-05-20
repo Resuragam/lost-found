@@ -1,7 +1,7 @@
 // 云函数入口文件
 const cloud = require("wx-server-sdk");
 
-cloud.init({ env: "lost-found-9gf6k1tce66b0eb1" }); // 使用当前云环境
+cloud.init({ env: "lost-found-1gt37wpb57342ea8" }); // 使用当前云环境
 
 const db = cloud.database();
 
@@ -26,7 +26,7 @@ exports.main = async (event, context) => {
           openId: event.openId,
           nickname: `用户_${event.openId.substring(1, 8)}`,
           avatar:
-            "cloud://lost-found-9gf6k1tce66b0eb1.6c6f-lost-found-9gf6k1tce66b0eb1-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
+            "cloud://lost-found-1gt37wpb57342ea8.6c6f-lost-found-1gt37wpb57342ea8-1323247746/user/b_da008bf0a8c1c20b40590fbf990c6cea.jpg",
           phoneNumber: null,
           createTime: serverDate,
           updateTime: serverDate,

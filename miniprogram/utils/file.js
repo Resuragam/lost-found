@@ -10,7 +10,7 @@ export const uploadFile = (file, path, onCall = () => {}) => {
       cloudPath: path,
       filePath: file,
       config: {
-        env: "lost-found-9gf6k1tce66b0eb1" // 需要替换成自己的微信云托管环境ID
+        env: "lost-found-1gt37wpb57342ea8" // 需要替换成自己的微信云托管环境ID
       },
       success: res => resolve(res.fileID),
       fail: e => {
@@ -39,7 +39,7 @@ export const deleteFile = async fileID => {
   return await wx.cloud.deleteFile({
     fileList: list,
     config: {
-      env: "lost-found-9gf6k1tce66b0eb1" // 需要替换自己的环境ID
+      env: "lost-found-1gt37wpb57342ea8" // 需要替换自己的环境ID
     }
   });
 };

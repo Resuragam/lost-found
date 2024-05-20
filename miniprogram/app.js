@@ -10,7 +10,7 @@ App({
       console.error("请使用 2.2.3 或以上的基础库以使用云能力");
     } else {
       wx.cloud.init({
-        env: "lost-found-9gf6k1tce66b0eb1",
+        env: "lost-found-1gt37wpb57342ea8",
         traceUser: true
       });
 
@@ -43,7 +43,7 @@ App({
     userInfo: {
       nickname: "默认名称",
       avatarUrl:
-        "cloud://lost-found-9gf6k1tce66b0eb1.6c6f-lost-found-9gf6k1tce66b0eb1-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
+        "cloud://lost-found-1gt37wpb57342ea8.6c6f-lost-found-1gt37wpb57342ea8-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
       phoneNumber: ""
     }
   }
