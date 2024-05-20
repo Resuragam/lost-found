@@ -1,7 +1,15 @@
 // pages/issuance/publishLost/index.js
 import { uploadFile } from "../../../utils/file";
 import { createLostRecord } from "../../../api/issuance";
-
+const filedKey = ['title', 'lostTime', 'address', 'phoneNumber', 'desc', 'imageList']
+const filedKeyArrayMessage = {
+  title: "请输入标题",
+  lostTime: "请输入时间",
+  address: "请输入位置信息",
+  phoneNumber: "请输入联系方式",
+  desc: "请输入物品描述信息",
+  imageList: "请上传物品图片",
+}
 Page({
   /**
    * 页面的初始数据
@@ -47,28 +55,44 @@ Page({
    * 发布失物招领
    */
   async handlePublishLost() {
-    wx.showLoading({
-      title: "发布...",
-      mask: true
-    });
-    console.log(this.data);
-    await this.uploadImage();
-    await createLostRecord({
-      title: this.data.title,
-      lostTime: this.data.lostTime,
-      address: this.data.address,
-      phoneNumber: this.data.phoneNumber,
-      desc: this.data.desc,
-      imageFileList: this.data.imageFileList,
-      openId: wx.getStorageSync("openId")
-    });
-    wx.hideLoading();
-    wx.showToast({
-      title: "发布成功",
-      icon: "success",
-      duration: 1000,
-      mask: false
-    });
+    try {
+      filedKey.forEach(key => {
+        console.log(key, this.data[key])
+        if(!this.data[key]) {
+          throw new Error(filedKeyArrayMessage[key])
+        }
+        if(this.data[key] instanceof Array && !this.data[key].length) {
+          throw new Error(filedKeyArrayMessage[key])
+        }
+      })
+      wx.showLoading({
+        title: "发布...",
+        mask: true
+      });
+      console.log(this.data);
+      await this.uploadImage();
+      await createLostRecord({
+        title: this.data.title,
+        lostTime: this.data.lostTime,
+        address: this.data.address,
+        phoneNumber: this.data.phoneNumber,
+        desc: this.data.desc,
+        imageFileList: this.data.imageFileList,
+        openId: wx.getStorageSync("openId")
+      });
+      wx.hideLoading();
+      wx.showToast({
+        title: "发布成功",
+        icon: "success",
+        duration: 1000,
+        mask: false
+      });
+    }catch(err) {
+      wx.showToast({
+        title: err.message,
+        icon: "none"
+      })
+    }
   },
 
   /**
