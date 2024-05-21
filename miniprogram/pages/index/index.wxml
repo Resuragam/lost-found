@@ -2,7 +2,8 @@
 <navigation-bar
   title="失物招领小程序"
   custom-navbar="custom-navbar"></navigation-bar>
-<view class="search-module">
+<view>
+  <view class="search-module">
   <t-search
     t-class-input-container="white-search-input"
     shape="round"
@@ -166,3 +167,5 @@
     </t-empty>
   </view>
 </view>
+</view>
+

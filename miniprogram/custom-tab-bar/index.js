@@ -1,5 +1,6 @@
 // custom-tab-bar/index.js
 // custom-tab-bar/index.ts
+const app = getApp()
 Component({
   //  组件的属性列表
   properties: {},
@@ -36,11 +37,23 @@ Component({
       });
     },
     toPublishLost() {
+      if(app.globalData.status !== 2) {
+        return wx.showToast({
+          title: '请先前往个人中心绑定学生信息',
+          icon: "none"
+        })
+      }
       wx.navigateTo({
         url: "/pages/issuance/publishLost/index"
       });
     },
     toPublishFound() {
+      if(app.globalData.status !== 2) {
+        return wx.showToast({
+          title: '请先前往个人中心绑定学生信息',
+          icon: "none"
+        })
+      }
       wx.navigateTo({
         url: "/pages/issuance/publishFound/index"
       });

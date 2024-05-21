@@ -33,7 +33,8 @@ exports.main = async (event, context) => {
           lostTotal: 0,
           foundTotal: 0,
           college: "",
-          studentNumber: ""
+          studentNumber: "",
+          status: 0,
         }
       });
       return ({ data } = await db

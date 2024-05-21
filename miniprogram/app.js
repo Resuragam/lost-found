@@ -43,6 +43,7 @@ App({
       this.globalData.lostTotal = loginRes[0].lostTotal;
       this.globalData.college = loginRes[0].college;
       this.globalData.studentNumber = loginRes[0].studentNumber;
+      this.globalData.status = loginRes[0].status;
       console.log("loginRes: ", loginRes);
       console.log("globalData: ", this.globalData.userInfo);
     }
@@ -56,7 +57,8 @@ App({
       foundTotal: 0,
       lostTotal: 0,
       college: "",
-      studentNumber: ''
+      studentNumber: '',
+      status: 0,
     }
   }
 });
