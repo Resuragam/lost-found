@@ -1,23 +1,25 @@
 <!--pages/my/bindSchool/index.wxml-->
 <navigation-bar
-  title="学校绑定"
+  title="学院绑定"
   leftArrow="{{true}}"
   custom-navbar="custom-navbar"></navigation-bar>
 <view class="page-container">
   <view class="form-container">
-    <view class="input-label">标签文字</view>
-    <t-input placeholder="请输入文字" />
-    <view class="input-label">标签文字</view>
-    <t-input placeholder="请输入文字" />
-    <view class="input-label">标签文字</view>
+    <view class="input-label">学院信息</view>
     <t-input
-      placeholder="请输入文字"
+      placeholder="请输入学院信息"
+      model:value="{{college}}" />
+    <view class="input-label">学号信息</view>
+    <t-input
+      model:value="{{studentNumber}}"
+      placeholder="请输入学号信息"
       style="margin-bottom: 0" />
   </view>
   <t-button
     size="large"
     theme="primary"
-    block>
+    block
+    bind:tap="bindSchool">
     绑定
   </t-button>
 </view>

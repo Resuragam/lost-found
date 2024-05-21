@@ -30,7 +30,6 @@
     borderless="{{true}}"
     prefixIcon="mobile"
     suffixIcon="chevron-right"
-    type="nickname"
     align="right"
     model:value="{{phoneNumber}}"
     placeholder="请输入手机号码" />
