@@ -9,12 +9,14 @@ Page({
   },
   onShow() {
     this.getTabBar().init();
-  },
-  onLoad() {
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl,
-      nickname: app.globalData.userInfo.nickname
+      nickname: app.globalData.userInfo.nickname,
+      lostRecordNum: app.globalData.lostTotal,
+      foundRecordNum: app.globalData.foundTotal,
     });
+  },
+  onLoad() {
   },
   toLostRecord() {
     wx.navigateTo({

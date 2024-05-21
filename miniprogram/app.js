@@ -35,9 +35,12 @@ App({
           icon: "error"
         });
       }
+      console.log(loginRes[0])
       this.globalData.userInfo.nickname = loginRes[0].nickname;
       this.globalData.userInfo.avatarUrl = loginRes[0].avatar;
       this.globalData.userInfo.phoneNumber = loginRes[0].phoneNumber;
+      this.globalData.foundTotal = loginRes[0].foundTotal;
+      this.globalData.lostTotal = loginRes[0].lostTotal;
       console.log("loginRes: ", loginRes);
       console.log("globalData: ", this.globalData.userInfo);
     }
@@ -47,7 +50,9 @@ App({
       nickname: "默认名称",
       avatarUrl:
         "cloud://lost-found-1gt37wpb57342ea8.6c6f-lost-found-1gt37wpb57342ea8-1323247746/public/9d82d158ccbf6c8109428c4449b4263832fa40b9.jpeg@f_auto.webp",
-      phoneNumber: ""
+      phoneNumber: "",
+      foundTotal: 0,
+      lostTotal: 0,
     }
   }
 });

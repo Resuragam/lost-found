@@ -30,8 +30,8 @@ exports.main = async (event, context) => {
           phoneNumber: null,
           createTime: serverDate,
           updateTime: serverDate,
-          lostRecordTotal: 0,
-          foundRecordToatl: 0
+          lostTotal: 0,
+          foundTotal: 0
         }
       });
       return ({ data } = await db
@@ -56,11 +56,7 @@ exports.main = async (event, context) => {
       .count();
 
     return {
-      data: {
-        ...data,
-        lostRecordTotal: lostRes.total,
-        foundRecordToatl: foundRes.total
-      }
+      data,
     };
   } catch (e) {
     console.error(e);
