@@ -31,7 +31,9 @@ exports.main = async (event, context) => {
           createTime: serverDate,
           updateTime: serverDate,
           lostTotal: 0,
-          foundTotal: 0
+          foundTotal: 0,
+          college: "",
+          studentNumber: ""
         }
       });
       return ({ data } = await db

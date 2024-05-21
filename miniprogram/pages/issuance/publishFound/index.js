@@ -71,7 +71,7 @@ Page({
       });
       console.log(this.data);
       await this.uploadImage();
-      await createFoundRecord({
+      const res = await createFoundRecord({
         title: this.data.title,
         foundTime: this.data.foundTime,
         address: this.data.address,
@@ -80,6 +80,9 @@ Page({
         imageFileList: this.data.imageFileList,
         openId: wx.getStorageSync("openId")
       });
+      if(res.code === 200) {
+        getApp().globalData.foundTotal ++;
+      }
       wx.hideLoading();
       wx.showToast({
         title: "发布成功",

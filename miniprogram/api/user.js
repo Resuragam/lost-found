@@ -32,6 +32,24 @@ export const updateUserInfo = async (openId, nickname, fileId, phoneNumber) => {
 };
 
 /**
+ * 用户修改学院绑定信息
+ * @param {string} openId 
+ * @param {string} college 
+ * @param {string} studentNumber 
+ */
+export const updateSchoolInfo = async (openId, college, studentNumber) => {
+  const res = await wx.cloud.callFunction({
+    name: "updateSchoolInfo",
+    data: {
+      openId,
+      college,
+      studentNumber,
+    }
+  });
+  return res.result;
+};
+
+/**
  * 根据 openId 获取当前用户的发布失物记录
  * @param { string } openId 用户openId
  */

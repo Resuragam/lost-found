@@ -41,6 +41,8 @@ App({
       this.globalData.userInfo.phoneNumber = loginRes[0].phoneNumber;
       this.globalData.foundTotal = loginRes[0].foundTotal;
       this.globalData.lostTotal = loginRes[0].lostTotal;
+      this.globalData.college = loginRes[0].college;
+      this.globalData.studentNumber = loginRes[0].studentNumber;
       console.log("loginRes: ", loginRes);
       console.log("globalData: ", this.globalData.userInfo);
     }
@@ -53,6 +55,8 @@ App({
       phoneNumber: "",
       foundTotal: 0,
       lostTotal: 0,
+      college: "",
+      studentNumber: ''
     }
   }
 });

@@ -71,7 +71,7 @@ Page({
       });
       console.log(this.data);
       await this.uploadImage();
-      await createLostRecord({
+      const res = await createLostRecord({
         title: this.data.title,
         lostTime: this.data.lostTime,
         address: this.data.address,
@@ -80,6 +80,10 @@ Page({
         imageFileList: this.data.imageFileList,
         openId: wx.getStorageSync("openId")
       });
+      console.log('发布', res)
+      if(res.code === 200) {
+        getApp().globalData.lostTotal ++;
+      }
       wx.hideLoading();
       wx.showToast({
         title: "发布成功",
@@ -93,6 +97,7 @@ Page({
         }
       });
     }catch(err) {
+      console.log('发布失败', err)
       wx.showToast({
         title: err.message,
         icon: "none"
